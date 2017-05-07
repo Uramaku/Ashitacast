@@ -1,0 +1,138 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {DRG} script for Ashitacast by Rizekai & Kenjigoku
+v1.52, 04/18/17
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* None at present.
+===========================================================================================================================================
+-->
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+
+<!--Equip set for various thing's-->
+	
+	<sets>
+		<set name="Stand"><!--When not engaged. Stand equip set.-->
+            <main>???</main><sub>???</sub><Range>???</Range><ammo>Ginsen</ammo>
+			<head>Peltast's Mezail +1</head><neck>Twilight Torque</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Defending Ring</lring><rring>Ambuscade Ring</rring>
+			<back>Iximulew Cape</back><waist>Flume Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
+		</set>	
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+            <Range>???</Range><ammo>Ginsen</ammo>
+			<head>Ptero Armet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Ramuh Ring +1</lring><rring>Ambuscade Ring</rring>
+			<back>Atheling Mantle</back><waist>Cetl Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
+		</set>
+		<set name="Kogul_WS"><!--Weaponskill equip set-->
+            <Range>???</Range><ammo>Jukukik Feather</ammo>
+			<head>Peltast's Mezail +1</head><neck>Ancient Torque</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+			<back>Kayapa Cape</back><waist>Fotia Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
+	    </set>
+		<set name="Drakes_WS"><!--Weaponskill equip set-->
+            <Range>???</Range><ammo>Jukukik Feather</ammo>
+			<head>Peltast's Mezail +1</head><neck>Ancient Torque</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+			<back>Kayapa Cape</back><waist>Fotia Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
+	    </set>
+		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
+		    <ammo>Dosis Tathlum</ammo>
+			<head>???</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
+			<body>???</body><hands>???</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
+	        <back>Toro Cape</back><waist>Cimmerian Sash</waist><legs>???</legs><feet>???</feet>
+		</set>
+		<set name="Ninjutsu_Buff"><!--When casting Buff Ninjutsu equip set.-->
+		    <ammo>Impatiens</ammo>
+			<head>???</head><neck>Ninjutsu Torque</neck><lear>Stealth Earring</lear><rear>Loquac. Earring</rear>
+			<body>???</body><hands>???</hands><lring>Weather. Ring</lring><rring>Prolix Ring</rring>
+	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>Enif Cosciales</legs><feet>???</feet>
+		</set>
+		<set name="Ninjutsu_Debuff"><!--When casting Debuff Ninjutsu equip set.-->
+		    <ammo>Impatiens</ammo>
+			<head>???</head><neck>Ninjutsu Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
+			<body>???</body><hands>???</hands><lring>Levia. Ring +1</lring><rring>Weather. Ring</rring>
+	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>???</legs><feet>???</feet>
+		</set>
+	</sets>
+
+	<idlegear>
+        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
+		<else><equip set="Stand" /></else><!--When not engaged this will equip "Stand Set"-->
+	</idlegear>
+
+	<jobability><!--jobability equip set.-->
+	    <if ad_name="Jump">
+		    <equip>
+			    <body>Vishap Mail +1</body>
+			<feet>Vishap Greaves +1</feet>
+		    </equip>
+		</if>
+		<if ad_name="High Jump">
+		    <equip>
+			    <legs>Vishap Brais +1</legs>
+		    </equip>
+		</if>
+		<if ad_name="Spirit Link">
+		    <equip>
+			    <head>Vishap Armet +1</head>
+		    </equip>
+		</if>
+		<if ad_name="Ancient Circle">
+		    <equip>
+			    <legs>Vishap Brais +1</legs>
+		    </equip>
+		</if>
+		<if ad_name="Spirit Jump|Soul Jump">
+		    <equip>
+			<legs>Pelt. Cuissots +1</legs>
+			<feet>Vishap Greaves +1</feet>
+		    </equip>
+		</if>
+		<if ad_name="Restoring Breath">
+		    <equip>			
+		    </equip>
+		</if>
+		<if ad_name="Angon">
+		    <equip>
+			    <Ammo>Angon</Ammo>
+				<rear>Dragoon's Earring</rear>
+		    </equip>
+		</if>
+		<if ad_name="Call Wyvern">
+		    <equip>
+			<Body>Ptero. Mail +1</Body>
+		    </equip>
+		</if>
+	</jobability>
+	
+	<weaponskill>
+	    <if ad_name="Drakesbane"><equip set="Drakes_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="Geirskogul"><equip set="Kogul_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<midmagic><!--When Casting-->
+        <if ad_skill="Ninjutsu">
+		    <if ad_name="Utsusemi*|Tonko*|Monomi">
+                <equip set="Ninjutsu_Buff"/>
+        </if>
+         <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+                <equip set="Ninjutsu_Ele"/>
+		</if>
+			 <elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+                <equip set="Ninjutsu_Debuff"/>
+		</if>
+         </elseif>		
+    </midmagic>
+</ashitacast>

@@ -1,0 +1,315 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {BLU} script for Ashitacast by Rizekai & Kenjigoku
+v1.52, 04/18/17
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* None at present.
+===========================================================================================================================================
+-->
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+
+<!--Equip set for various thing's-->
+	
+	<sets>
+		<set name="Stand"><!--When not engaged. Stand equip set.-->
+            <main>Tizona</main><sub>Tizona</sub><Range>???</Range><ammo>Ginsen</ammo>
+			<head>Hashishin Kavuk +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands><lring>Defending Ring</lring><rring>Epona's Ring</rring>
+			<back>Atheling Mantle</back><waist>Fotia Belt</waist><legs>Hashishin Tayt +1</legs><feet>Hashi. Basmak +1</feet>
+		</set>	
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+            <ammo>Ginsen</ammo>
+			<head>Luh. Keffiyeh +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+			<body>Luhlaza Jubbah +1</body><hands>Luh. Bazubands +1</hands><lring>Ambuscade Ring</lring><rring>Epona's Ring</rring>
+			<back>Atheling Mantle</back><waist>Cetl Belt</waist><legs>Luhlaza Shalwar +1</legs><feet>Luhlaza Charuqs +1</feet>
+		</set>
+		<set name="Expia_WS"><!--Weaponskill equip set-->
+            <ammo>Jukukik Feather</ammo>
+			<head>Hashishin Kavuk +1</head><neck>Tjukurrpa Medal</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
+			<body>Luhlaza Jubbah +1</body><hands>Luh. Bazubands +1</hands><lring>Ramuh Ring +1</lring><rring>Ifrit's Ring +1</rring>
+			<back>Kayape Cape</back><waist>Fotia Belt</waist><legs>Luhlaza Shalwar +1</legs><feet>Hashi. Basmak +1</feet>
+		</set>
+		<set name="NinCast" baseset="Precast"><!--When casting Utsusemi equip set.-->
+		    <ammo>Impatiens</ammo>
+			<head>Hashishin Kavuk +1</head><neck>Moepapa Medal</neck><lear>Ninjutsu Earring</lear><rear>Loquac. Earring</rear>
+			<body>Luhlaza Jubbah +1</body><hands>Thaumas Gloves</hands><lring>Weather. Ring</lring><rring>Prolix Ring</rring>
+	        <back>Swith Cape</back><waist>Witful Belt</waist><legs>Enif Cosciales</legs><feet>Luhlaza Charuqs +1</feet>
+		</set>
+		<set name="Magical"><!--BluMagic Magical (VIT, DEX, MND, INT, CHR) equip set.-->
+			<head>Hashishin Kavuk +1</head>
+			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands>
+	        <legs>Hashishin Tayt +1</legs><feet>Hashi. Basmak +1</feet>
+		</set>
+		<set name="Magical_ACC"><!--BluMagic Magical Accuracy equip set.-->
+            <ammo>Brio Dart</ammo>
+			<head>Luh. Keffiyeh +1</head><neck>Stoicheion Medal</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
+			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands><lring>Weather. Ring</lring><rring>Lavia. Ring +1</rring>
+	        <back>Oneiros CCape</back><waist>Aswang Sash</waist><legs>Hashishin Tayt +1</legs><feet>Hashi. Basmak +1</feet>
+		</set>
+		<set name="Physical"><!--BluMagic Physical (STR, VIT, DEX, AGI, MND, INT, CHR) equip set.-->
+			<head>Luh. Keffiyeh +1</head>
+			<body>Luhlaza Jubbah +1</body><hands>Luh. Bazubands +1</hands>
+	        <legs>Luhlaza Shalwar +1</legs><feet>Luhlaza Charuqs +1</feet>
+		</set>
+		<set name="Physical_ACC"><!--BluMagic Physical Accuracy equip set.-->
+            <ammo>Jukukik Feather</ammo>
+			<head>Hashishin Kavuk +1</head><neck>Ancient Torque</neck><lear>Steelflash Earring</lear><rear>Evergreen Earring</rear>
+			<body>Luhlaza Jubbah +1</body><hands>Luh. Bazubands +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+	        <back>Kayape Cape</back><waist>Life Belt</waist><legs>Luhlaza Shalwar +1</legs><feet>Assim. Charuqs +1</feet>
+		</set>
+		<set name="Magical_Breath"><!--BluMagic Breath equip set.-->
+            <ammo>Dosis Tathlum</ammo>
+			<head>Assim. Keffiyeh +1</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
+			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
+	        <back>Toro Cape</back><waist>Aswang Sash</waist><legs>Luhlaza Shalwar +1</legs><feet>Hashi. Basmak +1</feet>
+		</set>
+		<set name="Magical_Healing" baseset="Magical"><!--BluMagic Healing equip set. Add Cure Potency.-->
+		    <ammo>Dosis Tathlum</ammo>
+			<head>???</head><neck>Aife's Medal</neck><lear>Neptune's Pearl</lear><rear>Neptune's Pearl</rear>
+			<body>???</body><hands>???</hands><lring>Levia. Ring +1</lring><rring>Levia. Ring +1</rring>
+	        <back>Tuilha Cape</back><waist>Cascade Belt</waist><legs>???</legs><feet>???</feet>
+		</set>
+		<set name="Magical_Enbuff"><!--BluMagic General Buff equip set.-->
+            <ammo>Mavi Tathlum</ammo>
+			<head>Luh. Keffiyeh +1</head><neck>???</neck><lear>???</lear><rear>???</rear>
+			<body>Assim. Jubbah +1</body><hands>Hashi. Bazu. +1</hands><lring>???</lring><rring>???</rring>
+	        <back>Cornflower Cape</back><waist>???</waist><legs>Hashishin Tayt +1</legs><feet>Luhlaza Charuqs +1</feet>
+		</set>
+		<set name="Precast"><!--This place gear/accessories where there's none added.-->
+			<ammo>Impatiens</ammo>
+			<head>???</head><neck>???</neck><lear>???</lear><rear>Loquac. Earring</rear>
+			<body>???</body><hands>???</hands><lring>Veneficium Ring</lring><rring>Prolix Ring</rring>
+	        <back>???</back><waist>Witful Belt</waist><legs>???</legs><feet>???</feet>
+		</set>
+		
+<!--Physical Equip Set-->
+	
+        <set name="Physical_STR" baseset="Physical"><!--Physical strength mod equip set.-->
+		    <ammo>Ginsen</ammo>
+			<head>???</head><neck>Tjukurrpa Medal</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
+			<body>Assim. Jubbah +1</body><hands>???</hands><lring>Ifrit Ring +1</lring><rring>Ifrit's Ring +1</rring>
+	        <back>Buquwik Cape</back><waist>Prosilio Belt</waist><legs>Hashishin Tayt +1</legs><feet>???</feet>
+        </set> 
+       <set name="Physical_DEX" baseset="Physical"><!--Physical dexterity mod equip set.-->
+		    <ammo>Jukukik Feather</ammo>
+			<head>???</head><neck>Moepapa Medal</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Assim. Jubbah +1</body><hands>???</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+	        <back>Kayape Cape</back><waist>Artful Belt +1</waist><legs>Hashishin Tayt +1</legs><feet>???</feet>
+        </set>
+		<set name="Physical_AGI" baseset="Physical"><!--Physical agility mod equip set.-->
+		    <ammo>Dosis Tathlum</ammo>
+			<head>???</head><neck>Moepapa Medal</neck><lear>Auster's Pearl</lear><rear>Auster's Pearl</rear>
+			<body>???</body><hands>???</hands><lring>Garuda Ring +1</lring><rring>Garuda Ring +1</rring>
+	        <back>Ik Cape</back><waist>Sveltesse Gouriz</waist><legs>???</legs><feet>???</feet>
+        </set>
+		<set name="Physical_VIT" baseset="Physical"><!--Physical vitality mod equip set.-->
+		    <ammo>Iwatsubute</ammo>
+			<head>???</head><neck>Tjukurrpa Medal</neck><lear>Terra's Pearl</lear><rear>Terra's Pearl</rear>
+			<body>???</body><hands>???</hands><lring>Titan Ring +1</lring><rring>Titan Ring +1</rring>
+	        <back>Iximulew Cape</back><waist>Chu'aba Belt</waist><legs>???</legs><feet>???</feet>
+        </set>
+		<set name="Physical_MND" baseset="Physical"><!--Physical mind mod equip set.-->
+		    <ammo>Dosis Tathlum</ammo>
+			<head>Hashishin Kavuk +1</head><neck>Aife's Medal</neck><lear>Neptune's Pearl</lear><rear>Neptune's Pearl</rear>
+			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands><lring>Levia. Ring +1</lring><rring>Levia. Ring +1</rring>
+	        <back>Tuilha Cape</back><waist>Cascade Belt</waist><legs>Hashishin Tayt +1</legs><feet>Hashi. Basmak +1</feet>
+        </set>
+		<set name="Physical_INT" baseset="Physical"><!--Physical intelligence mod equip set.-->
+		    <ammo>Ombre Tathlum</ammo>
+			<head>Hashishin Kavuk +1</head><neck>Aife's Medal</neck><lear>Aquilo's Pearl</lear><rear>Aquilo's Pearl</rear>
+			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands><lring>Shiva Ring +1</lring><rring>Shiva Ring +1</rring>
+	        <back>Toro Cape</back><waist>Sanctuary Obi +1</waist><legs>Hashishin Tayt +1</legs><feet>Hashi. Basmak +1</feet>
+        </set>
+		<set name="Physical_CHR" baseset="Physical"><!--Physical Charisma mod equip set.-->
+		    <ammo>Tsar's Egg</ammo>
+			<head>Hashishin Kavuk +1</head><neck>Dualism Collar</neck><lear>Skald Breloque</lear><rear>Enchanter's Earring</rear>
+			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands><lring>Carb. Ring +1</lring><rring>Carb. Ring +1</rring>
+	        <back>Birdman Cape</back><waist>Aristo Belt</waist><legs>Hashishin Tayt +1</legs><feet>Hashi. Basmak +1</feet>
+        </set>
+		
+<!--Magical Equip Set-->
+	
+		<set name="Magical_DEX" baseset="Magical"><!--Magical dexterity mod equip set.-->
+		    <ammo>Jukukik Feather</ammo>
+			<head>Luh. Keffiyeh +1</head><neck>Moepapa Medal</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Assim. Jubbah +1</body><hands>Luh. Bazubands +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+	        <back>Kayape Cape</back><waist>Artful Belt +1</waist><legs>Hashishin Tayt +1</legs><feet>Luhlaza Charuqs +1</feet>
+        </set>
+		<set name="Magical_VIT" baseset="Magical"><!--Magical vitality mod equip set.-->
+		    <ammo>Iwatsubute</ammo>
+			<head>Luh. Keffiyeh +1</head><neck>Tjukurrpa Medal</neck><lear>Terra's Pearl</lear><rear>Terra's Pearl</rear>
+			<body>Luhlaza Jubbah +1</body><hands>Luh. Bazubands +1</hands><lring>Titan Ring +1</lring><rring>Titan Ring +1</rring>
+	        <back>Iximulew Cape</back><waist>Chu'aba Belt</waist><legs>Luhlaza Shalwar +1</legs><feet>Luhlaza Charuqs +1</feet>
+        </set>
+		<set name="Magical_CHR" baseset="Magical"><!--Magical charisma mod equip set.-->
+		    <ammo>Tsar's Egg</ammo>
+			<head>???</head><neck>Dualism Collar</neck><lear>Skald Breloque</lear><rear>Enchanter's Earring</rear>
+			<body>???</body><hands>???</hands><lring>Carb. Ring +1</lring><rring>Carb. Ring +1</rring>
+	        <back>Birdman Cape</back><waist>Aristo Belt</waist><legs>???</legs><feet>???</feet>
+        </set>
+		<set name="Magical_MND" baseset="Magical"><!--Magical mind mod equip set.-->
+		    <ammo>Dosis Tathlum</ammo>
+			<head>???</head><neck>Aife's Medal</neck><lear>Neptune's Pearl</lear><rear>Neptune's Pearl</rear>
+			<body>???</body><hands>???</hands><lring>Leviathan Ring +1</lring><rring>Leviathan Ring +1</rring>
+	        <back>Tuilha Cape</back><waist>Cascade Belt</waist><legs>???</legs><feet>???</feet>
+        </set>
+		<set name="Magical_INT" baseset="Magical"><!--Magical intelligence mod equip set.-->
+		    <ammo>Dosis Tathlum</ammo>
+			<head>???</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
+			<body>???</body><hands>???</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
+	        <back>Toro Cape</back><waist>Aswang Sash</waist><legs>???</legs><feet>???</feet>
+        </set>
+	</sets>
+
+	<idlegear>
+        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
+		<else><equip set="Stand" /></else><!--When not engaged this will equip "Stand Set"-->
+	</idlegear>
+
+	<jobability><!--jobability equip set.-->
+		<if ad_name="Burst Affinity"><equip><feet>Hashi. Basmak +1</feet></equip></if>
+		<if ad_name="Chain Affinity"><equip><head>Hashishin Kavuk +1</head></equip></if>
+		<if ad_name="Convergence"><equip><head>Luh. Keffiyeh +1</head></equip></if>
+		<if ad_name="Diffusion"><equip><feet>Luhlaza Charuqs +1</feet></equip></if>
+		<if ad_name="Efflux"><equip><legs>Hashishin Tayt +1</legs></equip></if>
+		<if ad_name="Azure Lore"><equip><hands>Luh. Bazubands +1</hands></equip></if>
+	</jobability>
+	
+	<weaponskill>
+		<if ad_name="Expiacion"><equip set="Expia_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<!--
+	===========================================================================================================================================
+	Special Armor:
+	
+	[AF 1]     *Blue Mage Artifact Armor*
+	
+	1. Magus Keffiyeh [Head] / iLvl ~ Assimilator's Keffiyeh
+	2. Magus Jubbah [Body} / iLvl ~ Assimilator's Jubbah
+	3. Magus Bazubands [Hands] / iLvl ~ Assimilator's Bazubands
+	4. Magus Shalwar [Legs] / iLvl  ~ Assimilator's Shalwar
+	5. Magus Charuqs [Feet] / iLvl ~ Assimilator's Charuqs
+	
+	[AF 2]     *Blue Mage Relic Armor*
+	
+	1. Mirage Keffiyeh [Head] / iLvl ~ Luhlaza Keffiyeh
+	2. Mirage Jubbah [Body} / iLvl ~ Luhlaza Jubbah
+	3. Mirage Bazubands [Hands] / iLvl ~ Luhlaza Bazubands
+	4. Mirage Shalwar [Legs] / iLvl ~ Luhlaza Shalwar
+	5. Mirage Charuqs [Feet] / iLvl ~ Luhlaza Charuqs
+	
+	[AF 3]     *Blue Mage Empyrean Armor*
+	
+	1. Mavi Mintan [Head] / iLvl ~ Hashishin Mintan
+	2. Mavi Bazuband [Body} / iLvl ~ Hashishin Bazubands
+	3. Mavi Kavuk [Hands] / iLvl ~ Hashishin Kavuk
+	4. Mavi Tayt [Legs] / iLvl ~ Hashishin Tayt
+	5. Mavi Basmak [Feet] / iLvl ~ Hashishin Basmak
+	
+	===========================================================================================================================================
+	{Spells that require Unbridled Learning to cast.}
+	
+	*Absolute Terror|Bilgestorm|Blistering Roar|Bloodrake|Carcharian Verve|
+	Crashing Thunder|Droning Whirlwind|Gates of Hades|Harden Shell|Polar Roar|
+	Pyric Bulwark|Thunderbolt|Tourbillion|Uproot*
+	
+	{Gear for learning spells.}
+	
+	1. Luhlaza Keffiyeh [Head]
+	2. Assimilator's Jubbah [Body]
+	3. Assimilator's Bazubands +1 [Hands]
+	4. Mavi Tayt +2 [Legs]
+	5. Luhlaza Charuqs [Feet]
+	6.Mavi Tathlum [Ammo]
+	7.Cornflower Cape [Back]
+
+	===========================================================================================================================================
+	-->
+	
+	<midmagic>
+        <if ad_skill="ninjutsu">
+                <equip set="NinCast"/>
+           </if>
+		<if ad_skill="BlueMagic">
+			<if ad_name="Barrier Tusk|Diamondhide|Magic Barrier|Metallic Body|Plasma Charge|Pyric Bulwark|Reactor Cool">
+                        <equip set="Magical_Enbuff"/><!--Buffs that depend on blue magic skill.-->
+					</if>
+			<elseif ad_name="Amplification|Animating Wail|Battery Charge|Carcharian Verve|Cocoon|Erratic Flutter|Exuviation|Fantod|Feather Barrier|Harden Shell|Memento Mori|Nat. Meditation|Occultation|Orcish Counterstance|Refueling|Regeneration|Saline Coat|Triumphant Roar|Warm-Up|Winds of Promyvion|Zephyr Mantle">
+                        <equip set="Magical_Enbuff"/><!--Other general buffs.-->
+					</if>
+			<elseif ad_name="Healing Breeze|Magic Fruit|Plenilune Embrace|Pollen|Restoral|White Wind|Wild Carrot">
+                        <equip set="Magical_Healing"/><!--Healing spells.-->
+					</if>
+			<elseif ad_name="Bad Breath|Flying Hip Press|Frost Breath|Heat Breath|Hecatomb Wave|Magnetite Cloud|Poison Breath|Radiant Breath|Self-Destruct|Thunder Breath|Vapor Spray|Wind Breath">
+                        <equip set="Magical_Breath"/><!--Breath-based spells.-->
+					</if>
+			<elseif ad_name="Yawn|Blitzstrahl|Frypan|Head Butt|Sudden Lunge|Tail slap|Temporal Shift|Thunderbolt|Whirl of Rage">
+                        <equip set="Magical_ACC"/><!--Stun spells.-->
+					</if>
+					
+<!--Physical ACC  / Magical ACC-->	
+		
+			<elseif ad_name="1000 Needles|Absolute Terror|Actinic Burst|Auroral Drape|Awful Eye|Blank Gaze|Blistering Roar|Blood Drain|Blood Saber|Chaotic Eye|Cimicine Discharge|Cold Wave|Corrosive Ooze|Demoralizing Roar|Digest|Dream Flower|Enervation|Feather Tickle|Filamented Hold|Frightful Roar|Geist Wall|Hecatomb Wave|Infrasonics|Jettatura|Light of Penance|Lowing|Mind Blast|Mortal Ray|MP Drainkiss|Osmosis|Reaving Wind|Sandspin|Sandspray|Sheep Song|Soporific|Sound Blast|Stinking Gas|Sub-zero Smash|Venom Shell|Voracious Trunk">
+                        <equip set="Magical_ACC"/><!--Magical spells (generally debuffs) that we want to focus on magic accuracy over damage. Add Int for damage where available, though.-->
+					</if>							
+			<elseif ad_name="Heavy Strike">
+                        <equip set="Physical_ACC"/><!--Spells with heavy accuracy penalties, that need to prioritize accuracy first.-->
+					</if>
+
+<!--Physical Mod-->				
+					
+			<elseif ad_name="Battle Dance|Bloodrake|Death Scissors|Dimensional Death|Empty Thrash|Quadrastrike|Sinker Drill|Spinal Cleave|Uppercut|Vertical Cleave">
+                        <equip set="Physical_STR"/><!--Physical spells with Str stat mod.-->
+					</if>		
+			<elseif ad_name="Amorphic Spikes|Asuran Claws|Barbed Crescent|Claw Cyclone|Disseverment|Foot Kick|Frenetic Rip|Goblin Rush|Hysteric Barrage|Paralyzing Triad|Seedspray|Sickle Slash|Smite of Rage|Terror Touch|Thrashing Assault|Vanity Dive">
+                        <equip set="Physical_DEX"/><!--Physical spells with Dex stat mod.-->
+					</if>
+			<elseif ad_name="Benthic Typhoon|Feather Storm|Helldive|Hydro Shot|Jet Stream|Pinecone Bomb|Spiral Spin|Wild Oats">
+                        <equip set="Physical_AGI"/><!--Physical spells with Agi stat mod.-->
+					</if>		
+			<elseif ad_name="Body Slam|Cannonball|Delta Thrust|Glutinous Dart|Grand Slam|Power Attack|Quad. Continuum|Sprout Smack|Sub-zero Smash">
+                        <equip set="Physical_VIT"/><!--Physical spells with Vit stat mod.-->
+					</if>
+			<elseif ad_name="Ram Charge|Screwdriver|Tourbillion">
+                        <equip set="Physical_MND"/><!--Physical spells with Mnd stat mod.-->
+					</if>
+			<elseif ad_name="Mandibular Bite|Queasyshroom">
+                        <equip set="Physical_INT"/><!--Physical spells with Int stat mod.-->
+					</if>
+			<elseif ad_name="Bludgeon">
+                        <equip set="Physical_CHR"/><!--Physical spells with Chr stat mod.-->
+					</if>						
+									
+<!--Magical Mod-->
+	
+			<elseif ad_name="Charged Whisker|Gates of Hades">
+                        <equip set="Magical_DEX"/><!--Magical spells with a Dex stat mod. (on top of Int)-->
+					</if>
+			<elseif ad_name="Thermal Pulse">
+                        <equip set="Magical_VIT"/><!--Magical spells with a Vit stat mod. (on top of Int)-->
+					</if>
+			<elseif ad_name="Acrid Stream|Evryone. Grudge|Magic Hammer|Mind Blast">
+                        <equip set="Magical_MND"/><!--Magical spells with a Mnd mod.-->
+					</if>		
+			<elseif ad_name="Blastbomb|Blazing Bound|Bomb Toss|Cursed Sphere|Dark Orb|Death Ray|Diffusion Ray|Droning Whirlwind|Embalming Earth|Firespit|Foul Waters|Ice Break|Leafstorm|Maelstrom|Rail Cannon|Regurgitation|Rending Deluge|Retinal Glare|Subduction|Tem. Upheaval|Water Bomb">
+                        <equip set="Magical_INT"/><!--Magical spells with the typical Int mod.-->
+					</if>	
+			<elseif ad_name="Eyes On Me|Mysterious Light">
+                        <equip set="Magical_CHR"/><!--Magical spells with a Chr mod.-->
+             </if>
+         </elseif>		
+    </midmagic>
+</ashitacast>
