@@ -1,0 +1,126 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {THF} script for Ashitacast by Rizekai & Kenjigoku
+v1.52, 04/18/17
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* None at present.
+===========================================================================================================================================
+-->
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+
+<!--Equip set for various thing's-->
+	
+	<sets>
+		<set name="Stand"><!--When not engaged. Stand equip set.-->
+            <main>???</main><sub>???</sub><Range>???</Range><ammo>Ginsen</ammo>
+			<head>Lustratio Cap</head><neck>Fotia Gorget</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+			<body>Lustratio Harness</body><hands>Lustratio Mittens</hands><lring>Gorney Ring</lring><rring>Epona's Ring</rring>
+			<back>Canny Cape</back><waist>Fotia Belt</waist><legs>Lustratio Subligar</legs><feet>Pill. Poulaines +1</feet>
+		</set>	
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+            <ammo>Ginsen</ammo>
+			<head>Skulker's Bonnet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+			<body>Skulker's Vest +1</body><hands>Skulk. Armlets +1</hands><lring>Ambuscade Ring</lring><rring>Epona's Ring</rring>
+			<back>Canny Cape</back><waist>Cetl Belt</waist><legs>Skulk. Culottes +1</legs><feet>Plun. Poulaines +1</feet>
+		</set>
+		<set name="Stab_WS"><!--Weaponskill equip set-->
+            <ammo>Jukukik Feather</ammo>
+			<head>Lustratio Cap</head><neck>Fotia Gorget</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Lustratio Harness</body><hands>Lustratio Mittens</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+			<back>Kayapa Cape</back><waist>Fotia Belt</waist><legs>Lustratio Subligar</legs><feet>Lustratio Leggings</feet>
+	    </set>
+		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
+		    <ammo>Dosis Tathlum</ammo>
+			<head>Pill. Bonnet +1</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
+			<body>Pillager's Vest +1</body><hands>Pill. Armlets +1</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
+	        <back>Toro Cape</back><waist>Cimmerian Sash</waist><legs>Plun. Culottes +1</legs><feet>Plun. Poulaines +1</feet>
+		</set>
+		<set name="Ninjutsu_Buff"><!--When casting Buff Ninjutsu equip set.-->
+		    <ammo>Impatiens</ammo>
+			<head>Pill. Bonnet +1</head><neck>Ninjutsu Torque</neck><lear>Stealth Earring</lear><rear>Loquac. Earring</rear>
+			<body>Nebula Hpl. +1</body><hands>Thaumas Gloves</hands><lring>Weather. Ring</lring><rring>Prolix Ring</rring>
+	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>Enif Cosciales</legs><feet>Pill. Poulaines +1</feet>
+		</set>
+		<set name="Ninjutsu_Debuff"><!--When casting Debuff Ninjutsu equip set.-->
+		    <ammo>Impatiens</ammo>
+			<head>Plun. Bonnet +1</head><neck>Ninjutsu Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
+			<body>Plunderer's Vest +1</body><hands>Pill. Armlets +1</hands><lring>Carb. Ring +1</lring><rring>Weather. Ring</rring>
+	        <back>???</back><waist>Cimmerian Sash</waist><legs>Plun. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
+		</set>
+	</sets>
+
+	<idlegear>
+        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
+		<else><equip set="Stand" /></else><!--When not engaged this will equip "Stand Set"-->
+	</idlegear>
+
+	<jobability><!--jobability equip set.-->
+	    <if ad_name="Sneak Attack">
+		    <equip>
+		        <hands>Skulk. Armlets +1</hands>
+		    </equip>
+		</if>
+		<if ad_name="Trick Attack">
+			<equip>
+		        <hands>Pill. Armlets +1</hands>
+		    </equip>
+		</if>
+		<if ad_name="Hide">
+			<equip>
+		        <body>Pillager's Vest +1</body><lring>Gorney Ring</lring>
+				<waist>Chaac Belt</waist>
+		    </equip>
+		</if>
+		<if ad_name="Steal">
+			<equip>
+		        <neck>Pentalagus Charm</neck>
+				<hands>Thief's Kote</hands><lring>Gorney Ring</lring><rring>Rogue's Ring</rring>
+				<legs>Pill. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
+		    </equip>
+		</if>
+	</jobability>
+	
+	<weaponskill>
+		<if ad_name="Mandalic Stab"><equip set="Stab_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<midmagic>
+        <if ad_skill="Ninjutsu">
+		    <if ad_name="Utsusemi*|Tonko*|Monomi">
+                <equip set="Ninjutsu_Buff"/>
+        </if>
+<!--
+===========================================================================================================================================
+Counter Clock Wise Weakness Rotation Spells.
+
+		 Fire
+     /          \
+ Ice             Water
+   |             |
+Wind             Lightning
+     \          /
+	     Earth  
+		 
+===========================================================================================================================================
+-->
+            <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+                <equip set="Ninjutsu_Ele"/>
+		</if>
+			 <elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+                <equip set="Ninjutsu_Debuff"/>
+		</if>
+         </elseif>		
+    </midmagic>
+</ashitacast>
