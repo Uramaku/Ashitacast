@@ -1,0 +1,165 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {MNK} script for Ashitacast by Rizekai & Kenjigoku
+v1.52, 04/18/17
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* None at present.
+===========================================================================================================================================
+-->
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+
+<!--Equip set for various thing's-->
+	
+	<sets>
+		<set name="Stand"><!--When not engaged. Stand equip set.-->
+            <main>???</main><sub>???</sub><Range>???</Range><ammo>Honed Tathlum</ammo>
+			<head>Hizamaru Somen +1</head><neck>Moonbeam Nodowa</neck><lear>Bladeborn Earring</lear><rear>Steelflash Earring</rear>
+			<body>Hiza. Haramaki +1</body><hands>Hizamaru Kote +1</hands><lring>K'ayres Ring</lring><rring>Hizamaru Ring</rring>
+			<back>Anchoret's Mantle</back><waist>Black Belt</waist><legs>Hiza. Hizayoroi +2</legs><feet>Hermes' Sandals</feet>
+		</set>	
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+            <Range>???</Range><ammo>Honed Tathlum</ammo>
+			<head>Hizamaru Somen +1</head><neck>Moonbeam Nodowa</neck><lear>Bladeborn Earring</lear><rear>Steelflash Earring</rear>
+			<body>Hiza. Haramaki +1</body><hands>Hizamaru Kote +1</hands><lring>K'ayres Ring</lring><rring>Hizamaru Ring</rring>
+			<back>Anchoret's Mantle</back><waist>Dynamic Belt</waist><legs>Hiza. Hizayoroi +2</legs><feet>Hiza. Sune-Ate +1</feet>
+		</set>
+		<set name="Smite"><!--Weaponskill equip set-->
+            <Range>???</Range><ammo>Honed Tathlum</ammo>
+			<head>Hizamaru Somen +1</head><neck>Faith Torque</neck><lear>Moonshade Earring</lear><rear>Steelflash Earring</rear>
+			<body>Hiza. Haramaki +1</body><hands>Hizamaru Kote +1</hands><lring>Karieyh Ring</lring><rring>Hizamaru Ring</rring>
+			<back>Anchoret's Mantle</back><waist>Caudata Belt</waist><legs>Hiza. Hizayoroi +2</legs><feet>Hiza. Sune-Ate +1</feet>
+	    </set>
+		<set name="Fists"><!--Weaponskill equip set-->
+            <Range>???</Range><ammo>Honed Tathlum</ammo>
+			<head>Hizamaru Somen +1</head><neck>Faith Torque</neck><lear>Moonshade Earring</lear><rear>Steelflash Earring</rear>
+			<body>Hiza. Haramaki +1</body><hands>Hizamaru Kote +1</hands><lring>Karieyh Ring</lring><rring>Hizamaru Ring</rring>
+			<back>Anchoret's Mantle</back><waist>Caudata Belt</waist><legs>Hiza. Hizayoroi +2</legs><feet>Hiza. Sune-Ate +1</feet>
+	    </set>
+		<set name="Spinning"><!--Weaponskill equip set-->
+            <Range>???</Range><ammo>Honed Tathlum</ammo>
+			<head>Hizamaru Somen +1</head><neck>Thunder Gorget</neck><lear>Moonshade Earring</lear><rear>Steelflash Earring</rear>
+			<body>Hiza. Haramaki +1</body><hands>Hizamaru Kote +1</hands><lring>Rajas Ring</lring><rring>Hizamaru Ring</rring>
+			<back>Anchoret's Mantle</back><waist>Flame Belt</waist><legs>Hiza. Hizayoroi +2</legs><feet>Hiza. Sune-Ate +1</feet>
+	    </set>
+		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
+		    <ammo>???</ammo>
+			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
+			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
+	        <back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+		</set>
+		<set name="Ninjutsu_Buff"><!--When casting Buff Ninjutsu equip set.-->
+		    <ammo>???</ammo>
+			<head>???</head><neck>Magoraga Beads</neck><lear>Loquac. Earring</lear><rear>???</rear>
+			<body>???</body><hands>Thaumas Gloves</hands><lring>???</lring><rring>???</rring>
+	        <back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+		</set>
+		<set name="Ninjutsu_Debuff"><!--When casting Debuff Ninjutsu equip set.-->
+		    <ammo>???</ammo>
+			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
+			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
+	        <back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+		</set>
+	</sets>
+
+	<idlegear>
+        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
+		<else><equip set="Stand" /></else><!--When not engaged this will equip "Stand Set"-->
+	</idlegear>
+
+	<jobability><!--jobability equip set.-->
+	    <if ad_name="Hundred Fist">
+		    <equip>			
+		    </equip>
+		</if>
+		<if ad_name="Focus">
+		    <equip>
+			<head>Anchorite's Crown</head>
+		    </equip>
+		</if>
+		<if ad_name="Dodge">
+		    <equip>
+			<feet>Anch. Gaiters</feet>
+		    </equip>
+		</if>
+		<if ad_name="Chakra">
+		    <equip>
+			<body>Anch. Cyclas +1</body>
+			<hands>Hes. Gloves</hands>
+		    </equip>
+		</if>
+		<if ad_name="Boost">
+		    <equip>
+			<hands>Anch. Gloves +1</hands>
+		    </equip>
+		</if>
+		<if ad_name="Counterstance">
+		    <equip>
+			<feet>Hes. Gaiters</feet>
+		    </equip>
+		</if>
+		<if ad_name="Chi Blast">
+		    <equip>			
+		    </equip>
+		</if>
+		<if ad_name="Formless Strikes">
+		    <equip>
+			<body>Hes. Cyclas</body>
+		    </equip>
+		</if>
+		<if ad_name="Footwork">
+		    <equip>
+			<feet>Tantra Gaiters +2</feet>
+		    </equip>
+		</if>
+		<if ad_name="Perfect Counter">
+		    <equip>
+            <head>Tantra Crown +1</head>			
+		    </equip>
+		</if>
+		<if ad_name="Impetus">
+		    <equip>			
+		    </equip>
+		</if>
+		<if ad_name="Inner Strength">
+		    <equip>			
+		    </equip>
+		</if>
+	</jobability>
+	
+	<weaponskill>
+		<if ad_name="Victory Smite"><equip set="Smite" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="Asuran Fists"><equip set="Fists" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<midmagic><!--When Casting-->
+        <if ad_skill="Ninjutsu">
+		    <if ad_name="Utsusemi*|Tonko*|Monomi">
+                <equip set="Ninjutsu_Buff"/>
+        </if>
+             <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+                <equip set="Ninjutsu_Ele"/>
+		</if>
+			 <elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+                <equip set="Ninjutsu_Debuff"/>
+		</if>
+        <if ad_name="Utsusemi: Ichi">
+                        <!-- Cancels shadows if only one is left. -->
+                     <if buffactive="66">
+                <command>/cancel 66</command>
+            </if>
+        </if>
+         </elseif>		
+    </midmagic>
+</ashitacast>
