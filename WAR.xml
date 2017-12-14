@@ -1,0 +1,144 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {WAR} script for Ashitacast by Rizekai & Kenjigoku
+v1.52, 12/14/17
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* None at present.
+===========================================================================================================================================
+-->
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+
+<!--Equip set for various thing's-->
+	
+	<sets>
+		<set name="Stand"><!--When not engaged. Stand equip set.-->
+            <main>Ukonvasara</Main><Sub>Brave Grip</Sub><Range>???</Range><ammo>Angha Gem</ammo>
+			<head>Agoge Mask +1</head><neck>Twilight Torque</neck><lear>Terra's Pearl</lear><rear>Terra's Pearl</rear>
+			<body>Agoge Lorica +1</body><hands>Agoge Mufflers +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
+			<back>Iximulew Cape</back><waist>Flume Belt +1</waist><legs>Agoge Cuisses +1</legs><feet>Agoge Calligae +1</feet>
+		</set>	
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+            <main>Ukonvasara</Main><Sub>Brave Grip</Sub><Range>???</Range><ammo>Ginsen</ammo>
+			<head>Boii Mask +1</head><neck>Portus Collar</neck><lear>Bladeborn Earring</lear><rear>Steelflash Earring</rear>
+			<body>Boii Lorica +1</body><hands>Boii Mufflers +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+			<back>Atheling Mantle</back><waist>Cetl Belt</waist><legs>Boii Cuisses +1</legs><feet>Boii Calligae +1</feet>
+		</set>
+		<set name="Ukko's Fury"><!--Weaponskill equip set-->
+            <Range>???</Range><ammo>Aqreaqa Bomblet</ammo>
+			<head>Boii Mask +1</head><neck>Justice Torque</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
+			<body>Boii Lorica +1</body><hands>Pummeler's Mufflers +1</hands><lring>Ifrit Ring +1</lring><rring>Ifrit Ring +1</rring>
+			<back>Buquwik Cape</back><waist>Fotia Belt</waist><legs>Boii Cuisses +1</legs><feet>Boii Calligae +1</feet>
+	    </set>
+		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
+		    <ammo>???</ammo>
+			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
+			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
+	        <back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+		</set>
+		<set name="Ninjutsu_Buff"><!--When casting Buff Ninjutsu equip set.-->
+		    <ammo>???</ammo>
+			<head>???</head><neck>???</neck><lear>Loquac. Earring</lear><rear>???</rear>
+			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
+	        <back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+		</set>
+		<set name="Ninjutsu_Debuff"><!--When casting Debuff Ninjutsu equip set.-->
+		    <ammo>???</ammo>
+			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
+			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
+	        <back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+		</set>
+	</sets>
+
+	<idlegear>
+        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
+		<else><equip set="Stand" /></else><!--When not engaged this will equip "Stand Set"-->
+	</idlegear>
+
+	<jobability><!--jobability equip set.-->
+	    <if ad_name="Mighty Strikes">
+		    <equip>			
+		    </equip>
+		</if>
+		<if ad_name="Brazen Rush">
+		    <equip>
+		    </equip>
+		</if>
+		<if ad_name="Berserk">
+		    <equip>
+			    <body>Pumm. Lorica +1</body>
+				<feet>Agoge Calligae +1</feet>
+		    </equip>
+		</if>
+		<if ad_name="Defender">
+		    <equip>
+		    </equip>
+		</if>
+		<if ad_name="Warcry">
+		    <equip>
+			    <head>Agoge Mask +1</head>
+		    </equip>
+		</if>
+		<if ad_name="Aggressor">
+		    <equip>
+			    <head>Pumm. Mask +1</head>
+			    <body>Agoge Lorica +1</body>
+		    </equip>
+		</if>
+		<if ad_name="Retaliation">
+		    <equip>
+			    <hands>Pumm. Mufflers +1</hands>
+			    <feet>Boii Calligae +1</feet>
+		    </equip>
+		</if>
+		<if ad_name="Restraint">
+		    <equip>
+                <hands>Boii Mufflers +1</hands>		
+		    </equip>
+		</if>
+		<if ad_name="Blood Rage">
+		    <equip>
+			    <body>Boii Lorica +1</body>
+		    </equip>
+		</if>
+		<if ad_name="Double Attack">
+		    <equip>
+		    </equip>
+		</if>
+	</jobability>
+	
+	<weaponskill>
+		<if ad_name="Ukko's Fury"><equip set="Ukko's Fury" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<midmagic><!--When Casting-->
+        <if ad_skill="Ninjutsu">
+		    <if ad_name="Utsusemi*|Tonko*|Monomi">
+                <equip set="Ninjutsu_Buff"/>
+        </if>
+             <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+                <equip set="Ninjutsu_Ele"/>
+		</if>
+			 <elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+                <equip set="Ninjutsu_Debuff"/>
+		</if>
+        <if ad_name="Utsusemi: Ichi">
+                        <!-- Cancels shadows if only one is left. -->
+                     <if buffactive="66">
+                <command>/cancel 66</command>
+            </if>
+        </if>
+         </elseif>		
+    </midmagic>
+</ashitacast>
