@@ -1,7 +1,7 @@
 <!--
 ===========================================================================================================================================
 Ura & Takime {PLD} script for Ashitacast by Rizekai & Kenjigoku
-v1.52, 04/18/17
+v1.52, 12/30/17
 
 Server: Realms of Jova
 
@@ -24,47 +24,60 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>???</main><sub>???</sub><Range>???</Range><ammo>Angha Gem</ammo>
-			<head>Souveran Schaller</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
-			<body>Souveran Cuirass</body><hands>Souv. Handschuhs</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
-			<back>Weard Mantle</back><waist>Flume Belt +1</waist><legs>Souveran Diechlings</legs><feet>Souveran Schuhs</feet>
+            <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
+			<head>Souv. Schaller +1</head><neck>Twilight Torque</neck><lear>Cassie Earring</lear><rear>Bloodgem Earring</rear>
+			<body>Souv. Cuirass +1</body><hands>Souv. Handsch. +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
+			<back>Weard Mantle</back><waist>Flume Belt +1</waist><legs>Souv. Diechlings +1</legs><feet>Souveran Schuhs +1</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
-            <Range>???</Range><ammo>Angha Gem</ammo>
-			<head>Souveran Schaller</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
-			<body>Souveran Cuirass</body><hands>Souv. Handschuhs</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
-			<back>Weard Mantle</back><waist>Flume Belt +1</waist><legs>Souveran Diechlings</legs><feet>Souveran Schuhs</feet>
+            <Range>_______</Range><ammo>Iwatsubute</ammo>
+			<head>Souv. Schaller +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
+			<body>Souv. Cuirass +1</body><hands>Souv. Handsch. +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
+			<back>Weard Mantle</back><waist>Chuq'aba Belt</waist><legs>Souv. Diechlings +1</legs><feet>Souveran Schuhs +1</feet>
 		</set>
 		<set name="Magical_Divine"><!--Magical Attack equip set.-->
-            <Range>???</Range><ammo>???</ammo>
-			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
-			<body>Rev. Surcoat +1</body><hands>???</hands><lring>???</lring><rring>???</rring>
-			<back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+            <Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>Rev. Surcoat +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+			<back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 		<set name="Magical_Healing"><!--Magical Healing equip set.-->
-		    <Range>???</Range><ammo>???</ammo>
-			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
-			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
-			<back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>	
+		    <Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>Kunaji Ring</lring><rring>Vocane Ring</rring>
+			<back>_______</back><waist>_______</waist><legs>Souv. Diechlings +1</legs><feet>_______</feet>	
 		</set>
 		<set name="Magical_Buff"><!--Magical Enhancing equip set.-->
-			<Range>???</Range><ammo>???</ammo>
-			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
-			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
-			<back>???</back><waist>???</waist><legs>Rev. Breeches +1</legs><feet>???</feet>
+			<Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>Enhancing Torque</neck><lear>Augmenting Earring</lear><rear>Loquac. Earring</rear>
+			<body>_______</body><hands>Souv. Handsch. +1</hands><lring>_______</lring><rring>>_______</rring>
+			<back>Mollusca Mantle</back><waist>Olympus Sash</waist><legs>Rev. Breeches +1</legs><feet>Souveran Schuhs +1</feet>
 		</set>
+		<set name="Uriel_WS"><!--Weaponskill equip set-->
+            <Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+			<back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+	    </set>
 		<set name="Atone_WS"><!--Weaponskill equip set-->
-            <Range>???</Range><ammo>???</ammo>
-			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
-			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
-			<back>???</back><waist>Fotia Belt</waist><legs>???</legs><feet>???</feet>
+            <Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+			<back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 	    </set>
-		<set name="Blade_WS"><!--Weaponskill equip set-->
-            <Range>???</Range><ammo>???</ammo>
-			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
-			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
-			<back>???</back><waist>Fotia Belt</waist><legs>???</legs><feet>???</feet>
+		<set name="Savage_WS"><!--Weaponskill equip set-->
+            <Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+			<back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 	    </set>
+		
+		<!--<set name="Precast">
+			<ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>-->
 	</sets>
 
 	<idlegear>
@@ -106,9 +119,18 @@ To do:
 		</if>
 	</jobability>
 	
+	<!--<premagic>
+		<equip set="Precast" />
+		<if ad_name="">
+			<equip>
+			</equip>
+		</if>
+	</premagic>-->
+	
 	<weaponskill>
 		<if ad_name="Atonement"><equip set="Atone_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
-		<if ad_name="Savage Blade"><equip set="Blade_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="Savage Blade"><equip set="Savage_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="Uriel Blade"><equip set="Uriel_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
 	</weaponskill>
 	
 	<midmagic><!--When Casting-->
@@ -121,7 +143,7 @@ To do:
             </if>
 		</if>
 		<elseif ad_skill="EnhancingMagic">
-		    <if ad_name="Reprisal|Phalanx">
+		    <if ad_name="En*|Bar*|Reprisal|Phalanx|Protect*|Shell*|Blink|Haste*|Refresh|Flurry|*Spikes">
 			    <equip set="Magical_Buff"/>
 			</if>
 		<if ad_name="Protect*|Shell*">

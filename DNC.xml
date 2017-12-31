@@ -1,7 +1,7 @@
 <!--
 ===========================================================================================================================================
 Ura & Takime {DNC} script for Ashitacast by Rizekai & Kenjigoku
-v1.52, 04/18/17
+v1.52, 12/30/17
 
 Server: Realms of Jova
 
@@ -24,10 +24,10 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>Terpsichore</main><sub>Odium</sub><Range>???</Range><ammo>Ginsen</ammo>
-			<head>Maculele Tiara +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
-			<body>Macu. Casaque +1</body><hands>Macu. Bangles +1</hands><lring>Defending Ring</lring><rring>Epona's Ring</rring>
-			<back>Atheling Mantle</back><waist>Fotia Belt</waist><legs>Maculele Tights +1</legs><feet>Skd. Jambeaux +1</feet>
+            <main>Terpsichore</main><sub>Praxidikai</sub><Range>_______</Range><ammo>Ginsen</ammo>
+			<head>Maculele Tiara +1</head><neck>Twilight Torque</neck><lear>Loquac. Earring</lear><rear>Roundel Earring</rear>
+			<body>Horos Casaque +1</body><hands>Macu. Bangles +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
+			<back>Iximulew Cape</back><waist>Flume Belt +1</waist><legs>Maculele Tights +1</legs><feet>Skd. Jambeaux +1</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
             <ammo>Ginsen</ammo>
@@ -38,7 +38,7 @@ To do:
 		<set name="Kleos_WS"><!--Weaponskill equip set-->
             <ammo>Jukukik Feather</ammo>
 			<head>Horos Tiara +1</head><neck>Tjukurrpa Medal</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
-			<body>Horos Casaque +1</body><hands>Horos Bangles +1</hands><lring>Vulcan's Pearl</lring><rring>Vulcan's Pearl</rring>
+			<body>Horos Casaque +1</body><hands>Horos Bangles +1</hands><lring>Ifrit Ring +1</lring><rring>Ifrit Ring +1</rring>
 			<back>Buquwik Cape</back><waist>Fotia Belt</waist><legs>Maxixi Tights +1</legs><feet>Horos Toe Shoes +1</feet>
 	    </set>
 		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->

@@ -1,7 +1,7 @@
 <!--
 ===========================================================================================================================================
 Ura & Takime {THF} script for Ashitacast by Rizekai & Kenjigoku
-v1.52, 04/18/17
+v1.52, 12/30/17
 
 Server: Realms of Jova
 
@@ -24,22 +24,22 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>???</main><sub>???</sub><Range>???</Range><ammo>Ginsen</ammo>
-			<head>Lustratio Cap</head><neck>Fotia Gorget</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
-			<body>Lustratio Harness</body><hands>Lustratio Mittens</hands><lring>Gorney Ring</lring><rring>Epona's Ring</rring>
-			<back>Canny Cape</back><waist>Fotia Belt</waist><legs>Lustratio Subligar</legs><feet>Pill. Poulaines +1</feet>
+            <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
+			<head>Skulker's Bonnet +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
+			<body>Skulker's Vest +1</body><hands>Skulk. Armlets +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
+			<back>Iximulew Cape</back><waist>Flume Belt</waist><legs>Skulk. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
-            <ammo>Ginsen</ammo>
+            <main>Vajra</main><sub>Vajra</sub><Range>_______</Range><ammo>Ginsen</ammo>
 			<head>Skulker's Bonnet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
-			<body>Skulker's Vest +1</body><hands>Skulk. Armlets +1</hands><lring>Ambuscade Ring</lring><rring>Epona's Ring</rring>
-			<back>Canny Cape</back><waist>Cetl Belt</waist><legs>Skulk. Culottes +1</legs><feet>Plun. Poulaines +1</feet>
+			<body>Skulker's Vest +1</body><hands>Skulk. Armlets +1</hands><lring>Ramuh Ring +1</lring><rring>Epona's Ring</rring>
+			<back>Canny Cape</back><waist>Windbuffet Belt</waist><legs>Skulk. Culottes +1</legs><feet>Plun. Poulaines +1</feet>
 		</set>
 		<set name="Stab_WS"><!--Weaponskill equip set-->
             <ammo>Jukukik Feather</ammo>
-			<head>Lustratio Cap</head><neck>Fotia Gorget</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
-			<body>Lustratio Harness</body><hands>Lustratio Mittens</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
-			<back>Kayapa Cape</back><waist>Fotia Belt</waist><legs>Lustratio Subligar</legs><feet>Lustratio Leggings</feet>
+			<head>Lustratio Cap +1</head><neck>Pentalagus Charm</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Skulker's Vest +1</body><hands>Lustr. Mittens +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+			<back>Kayapa Cape</back><waist>Artful Belt +1</waist><legs>Lustr. Subligar +1</legs><feet>Lustra. Leggings +1</feet>
 	    </set>
 		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
 		    <ammo>Dosis Tathlum</ammo>
@@ -57,7 +57,7 @@ To do:
 		    <ammo>Impatiens</ammo>
 			<head>Plun. Bonnet +1</head><neck>Ninjutsu Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
 			<body>Plunderer's Vest +1</body><hands>Pill. Armlets +1</hands><lring>Carb. Ring +1</lring><rring>Weather. Ring</rring>
-	        <back>???</back><waist>Cimmerian Sash</waist><legs>Plun. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
+	        <back>_______</back><waist>Cimmerian Sash</waist><legs>Plun. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
 		</set>
 	</sets>
 

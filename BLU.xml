@@ -1,7 +1,7 @@
 <!--
 ===========================================================================================================================================
 Ura & Takime {BLU} script for Ashitacast by Rizekai & Kenjigoku
-v1.52, 04/18/17
+v1.52, 12/30/17
 
 Server: Realms of Jova
 
@@ -24,7 +24,7 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>Tizona</main><sub>Tizona</sub><Range>???</Range><ammo>Ginsen</ammo>
+            <main>Tizona</main><sub>Tizona</sub><Range>_______</Range><ammo>Ginsen</ammo>
 			<head>Hashishin Kavuk +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
 			<body>Hashishin Mintan +1</body><hands>Hashi. Bazu. +1</hands><lring>Defending Ring</lring><rring>Epona's Ring</rring>
 			<back>Atheling Mantle</back><waist>Fotia Belt</waist><legs>Hashishin Tayt +1</legs><feet>Hashi. Basmak +1</feet>
@@ -77,48 +77,48 @@ To do:
 		</set>
 		<set name="Magical_Healing" baseset="Magical"><!--BluMagic Healing equip set. Add Cure Potency.-->
 		    <ammo>Dosis Tathlum</ammo>
-			<head>???</head><neck>Aife's Medal</neck><lear>Neptune's Pearl</lear><rear>Neptune's Pearl</rear>
-			<body>???</body><hands>???</hands><lring>Levia. Ring +1</lring><rring>Levia. Ring +1</rring>
-	        <back>Tuilha Cape</back><waist>Cascade Belt</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Aife's Medal</neck><lear>Neptune's Pearl</lear><rear>Neptune's Pearl</rear>
+			<body>_______</body><hands>_______</hands><lring>Levia. Ring +1</lring><rring>Levia. Ring +1</rring>
+	        <back>Tuilha Cape</back><waist>Cascade Belt</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 		<set name="Magical_Enbuff"><!--BluMagic General Buff equip set.-->
             <ammo>Mavi Tathlum</ammo>
-			<head>Luh. Keffiyeh +1</head><neck>???</neck><lear>???</lear><rear>???</rear>
-			<body>Assim. Jubbah +1</body><hands>Hashi. Bazu. +1</hands><lring>???</lring><rring>???</rring>
-	        <back>Cornflower Cape</back><waist>???</waist><legs>Hashishin Tayt +1</legs><feet>Luhlaza Charuqs +1</feet>
+			<head>Luh. Keffiyeh +1</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>Assim. Jubbah +1</body><hands>Hashi. Bazu. +1</hands><lring>_______</lring><rring>_______</rring>
+	        <back>Cornflower Cape</back><waist>_______</waist><legs>Hashishin Tayt +1</legs><feet>Luhlaza Charuqs +1</feet>
 		</set>
 		<set name="Precast"><!--This place gear/accessories where there's none added.-->
 			<ammo>Impatiens</ammo>
-			<head>???</head><neck>???</neck><lear>???</lear><rear>Loquac. Earring</rear>
-			<body>???</body><hands>???</hands><lring>Veneficium Ring</lring><rring>Prolix Ring</rring>
-	        <back>???</back><waist>Witful Belt</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>Loquac. Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>Veneficium Ring</lring><rring>Prolix Ring</rring>
+	        <back>_______</back><waist>Witful Belt</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 		
 <!--Physical Equip Set-->
 	
         <set name="Physical_STR" baseset="Physical"><!--Physical strength mod equip set.-->
 		    <ammo>Ginsen</ammo>
-			<head>???</head><neck>Tjukurrpa Medal</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
-			<body>Assim. Jubbah +1</body><hands>???</hands><lring>Ifrit Ring +1</lring><rring>Ifrit's Ring +1</rring>
-	        <back>Buquwik Cape</back><waist>Prosilio Belt</waist><legs>Hashishin Tayt +1</legs><feet>???</feet>
+			<head>_______</head><neck>Tjukurrpa Medal</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
+			<body>Assim. Jubbah +1</body><hands>_______</hands><lring>Ifrit Ring +1</lring><rring>Ifrit's Ring +1</rring>
+	        <back>Buquwik Cape</back><waist>Prosilio Belt</waist><legs>Hashishin Tayt +1</legs><feet>_______</feet>
         </set> 
        <set name="Physical_DEX" baseset="Physical"><!--Physical dexterity mod equip set.-->
 		    <ammo>Jukukik Feather</ammo>
-			<head>???</head><neck>Moepapa Medal</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
-			<body>Assim. Jubbah +1</body><hands>???</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
-	        <back>Kayape Cape</back><waist>Artful Belt +1</waist><legs>Hashishin Tayt +1</legs><feet>???</feet>
+			<head>_______</head><neck>Moepapa Medal</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Assim. Jubbah +1</body><hands>_______</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+	        <back>Kayape Cape</back><waist>Artful Belt +1</waist><legs>Hashishin Tayt +1</legs><feet>_______</feet>
         </set>
 		<set name="Physical_AGI" baseset="Physical"><!--Physical agility mod equip set.-->
 		    <ammo>Dosis Tathlum</ammo>
-			<head>???</head><neck>Moepapa Medal</neck><lear>Auster's Pearl</lear><rear>Auster's Pearl</rear>
-			<body>???</body><hands>???</hands><lring>Garuda Ring +1</lring><rring>Garuda Ring +1</rring>
-	        <back>Ik Cape</back><waist>Sveltesse Gouriz</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Moepapa Medal</neck><lear>Auster's Pearl</lear><rear>Auster's Pearl</rear>
+			<body>_______</body><hands>_______</hands><lring>Garuda Ring +1</lring><rring>Garuda Ring +1</rring>
+	        <back>Ik Cape</back><waist>Sveltesse Gouriz</waist><legs>_______</legs><feet>_______</feet>
         </set>
 		<set name="Physical_VIT" baseset="Physical"><!--Physical vitality mod equip set.-->
 		    <ammo>Iwatsubute</ammo>
-			<head>???</head><neck>Tjukurrpa Medal</neck><lear>Terra's Pearl</lear><rear>Terra's Pearl</rear>
-			<body>???</body><hands>???</hands><lring>Titan Ring +1</lring><rring>Titan Ring +1</rring>
-	        <back>Iximulew Cape</back><waist>Chu'aba Belt</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Tjukurrpa Medal</neck><lear>Terra's Pearl</lear><rear>Terra's Pearl</rear>
+			<body>_______</body><hands>_______</hands><lring>Titan Ring +1</lring><rring>Titan Ring +1</rring>
+	        <back>Iximulew Cape</back><waist>Chu'aba Belt</waist><legs>_______</legs><feet>_______</feet>
         </set>
 		<set name="Physical_MND" baseset="Physical"><!--Physical mind mod equip set.-->
 		    <ammo>Dosis Tathlum</ammo>
@@ -155,21 +155,21 @@ To do:
         </set>
 		<set name="Magical_CHR" baseset="Magical"><!--Magical charisma mod equip set.-->
 		    <ammo>Tsar's Egg</ammo>
-			<head>???</head><neck>Dualism Collar</neck><lear>Skald Breloque</lear><rear>Enchanter's Earring</rear>
-			<body>???</body><hands>???</hands><lring>Carb. Ring +1</lring><rring>Carb. Ring +1</rring>
-	        <back>Birdman Cape</back><waist>Aristo Belt</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Dualism Collar</neck><lear>Skald Breloque</lear><rear>Enchanter's Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>Carb. Ring +1</lring><rring>Carb. Ring +1</rring>
+	        <back>Birdman Cape</back><waist>Aristo Belt</waist><legs>_______</legs><feet>_______</feet>
         </set>
 		<set name="Magical_MND" baseset="Magical"><!--Magical mind mod equip set.-->
 		    <ammo>Dosis Tathlum</ammo>
-			<head>???</head><neck>Aife's Medal</neck><lear>Neptune's Pearl</lear><rear>Neptune's Pearl</rear>
-			<body>???</body><hands>???</hands><lring>Leviathan Ring +1</lring><rring>Leviathan Ring +1</rring>
-	        <back>Tuilha Cape</back><waist>Cascade Belt</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Aife's Medal</neck><lear>Neptune's Pearl</lear><rear>Neptune's Pearl</rear>
+			<body>_______</body><hands>_______</hands><lring>Leviathan Ring +1</lring><rring>Leviathan Ring +1</rring>
+	        <back>Tuilha Cape</back><waist>Cascade Belt</waist><legs>_______</legs><feet>_______</feet>
         </set>
 		<set name="Magical_INT" baseset="Magical"><!--Magical intelligence mod equip set.-->
 		    <ammo>Dosis Tathlum</ammo>
-			<head>???</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
-			<body>???</body><hands>???</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
-	        <back>Toro Cape</back><waist>Aswang Sash</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
+	        <back>Toro Cape</back><waist>Aswang Sash</waist><legs>_______</legs><feet>_______</feet>
         </set>
 	</sets>
 
@@ -233,8 +233,8 @@ To do:
 	3. Assimilator's Bazubands +1 [Hands]
 	4. Mavi Tayt +2 [Legs]
 	5. Luhlaza Charuqs [Feet]
-	6.Mavi Tathlum [Ammo]
-	7.Cornflower Cape [Back]
+	6. Mavi Tathlum [Ammo]
+	7. Cornflower Cape [Back]
 
 	===========================================================================================================================================
 	-->

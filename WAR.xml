@@ -24,22 +24,22 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>Ukonvasara</Main><Sub>Brave Grip</Sub><Range>???</Range><ammo>Angha Gem</ammo>
+            <main>Ukonvasara</Main><Sub>Pole Grip</Sub><Range>???</Range><ammo>Angha Gem</ammo>
 			<head>Agoge Mask +1</head><neck>Twilight Torque</neck><lear>Terra's Pearl</lear><rear>Terra's Pearl</rear>
 			<body>Agoge Lorica +1</body><hands>Agoge Mufflers +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
 			<back>Iximulew Cape</back><waist>Flume Belt +1</waist><legs>Agoge Cuisses +1</legs><feet>Agoge Calligae +1</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
-            <main>Ukonvasara</Main><Sub>Brave Grip</Sub><Range>???</Range><ammo>Ginsen</ammo>
+            <main>Ukonvasara</Main><Sub>Pole Grip</Sub><Range>???</Range><ammo>Ginsen</ammo>
 			<head>Boii Mask +1</head><neck>Portus Collar</neck><lear>Bladeborn Earring</lear><rear>Steelflash Earring</rear>
 			<body>Boii Lorica +1</body><hands>Boii Mufflers +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
 			<back>Atheling Mantle</back><waist>Cetl Belt</waist><legs>Boii Cuisses +1</legs><feet>Boii Calligae +1</feet>
 		</set>
 		<set name="Ukko's Fury"><!--Weaponskill equip set-->
-            <Range>???</Range><ammo>Aqreaqa Bomblet</ammo>
-			<head>Boii Mask +1</head><neck>Justice Torque</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
+            <Range>???</Range><ammo>Aqreqaq Bomblet</ammo>
+			<head>Boii Mask +1</head><neck>Ire Torque +1</neck><lear>Vulcan's Pearl</lear><rear>Vulcan's Pearl</rear>
 			<body>Boii Lorica +1</body><hands>Pummeler's Mufflers +1</hands><lring>Ifrit Ring +1</lring><rring>Ifrit Ring +1</rring>
-			<back>Buquwik Cape</back><waist>Fotia Belt</waist><legs>Boii Cuisses +1</legs><feet>Boii Calligae +1</feet>
+			<back>Buquwik Cape</back><waist>Beir Belt +1</waist><legs>Boii Cuisses +1</legs><feet>Boii Calligae +1</feet>
 	    </set>
 		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
 		    <ammo>???</ammo>
@@ -71,18 +71,16 @@ To do:
 		    <equip>			
 		    </equip>
 		</if>
-		<if ad_name="Brazen Rush">
+		<if ad_name="Provoke">
 		    <equip>
+			    <ammo>Tsar's Egg</ammo>
 		    </equip>
 		</if>
 		<if ad_name="Berserk">
 		    <equip>
+			    <main>Conqueror</Main>
 			    <body>Pumm. Lorica +1</body>
 				<feet>Agoge Calligae +1</feet>
-		    </equip>
-		</if>
-		<if ad_name="Defender">
-		    <equip>
 		    </equip>
 		</if>
 		<if ad_name="Warcry">
@@ -110,10 +108,6 @@ To do:
 		<if ad_name="Blood Rage">
 		    <equip>
 			    <body>Boii Lorica +1</body>
-		    </equip>
-		</if>
-		<if ad_name="Double Attack">
-		    <equip>
 		    </equip>
 		</if>
 	</jobability>

@@ -1,7 +1,7 @@
 <!--
 ===========================================================================================================================================
 Ura & Takime {SCH} script for Ashitacast by Rizekai & Kenjigoku
-v1.52, 04/18/17
+v1.52, 12/30/17
 
 Server: Realms of Jova
 
@@ -24,9 +24,9 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>Tupsimati</main><sub>Vivid Strap +1</sub><Range>???</Range><ammo>Impatiens</ammo>
+            <main>Tupsimati</main><sub>Vivid Strap +1</sub><Range>_______</Range><ammo>Impatiens</ammo>
 			<head>Acad. Mortar. +1</head><neck>Mizu. Kubikazari</neck><lear>Psystorm Earring</lear><rear>Loquac. Earring</rear>
-			<body>Acad. Gown +1</body><hands>Acad. Bracers +1</hands><lring>Defending Ring</lring><rring>Weather. Ring</rring>
+			<body>Acad. Gown +1</body><hands>Acad. Bracers +1</hands><lring>Renaye Ring</lring><rring>Weather. Ring</rring>
 			<back>Twilight Cape</back><waist>Fotia Belt</waist><legs>Acad. Pants +1</legs><feet>Herald's Gaiters</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
@@ -72,10 +72,10 @@ To do:
 	        <back>Tempered Cape</back><waist>Bishop's Sash</waist><legs>Arbatel Pants +1</legs><feet>Peda. Loaders +1</feet>	
 		</set>
 		<set name="Precast"><!--This place gear/accessories where there's none added.-->
-			<ammo>???</ammo>
-			<head>???</head><neck>???</neck><lear>???</lear><rear>???</rear>
-			<body>???</body><hands>???</hands><lring>???</lring><rring>???</rring>
-	        <back>???</back><waist>???</waist><legs>???</legs><feet>???</feet>
+			<ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 		<set name="Stoneskin" baseset="Magical_Buff">
 		    <rear>Earthcry Earring</rear>

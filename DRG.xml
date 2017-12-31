@@ -1,7 +1,7 @@
 <!--
 ===========================================================================================================================================
 Ura & Takime {DRG} script for Ashitacast by Rizekai & Kenjigoku
-v1.52, 04/18/17
+v1.52, 12/30/17
 
 Server: Realms of Jova
 
@@ -24,46 +24,46 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>???</main><sub>???</sub><Range>???</Range><ammo>Ginsen</ammo>
-			<head>Peltast's Mezail +1</head><neck>Twilight Torque</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
-			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Defending Ring</lring><rring>Ambuscade Ring</rring>
-			<back>Iximulew Cape</back><waist>Flume Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
+            <main>Rhongomiant</main><sub>Uther's Grip</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
+			<head>Ptero. Armet +1</head><neck>Twilight Torque</neck><lear>Terra's Pearl</lear><rear>Terra's Pearl</rear>
+			<body>Ptero. Mail +1</body><hands>Pel. Vambraces +1</hands><lring>Defending Ring</lring><rring>Titan Ring +1</rring>
+			<back>Iximulew Cape</back><waist>Flume Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Vishap Greaves +1</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
-            <Range>???</Range><ammo>Ginsen</ammo>
-			<head>Ptero Armet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+            <Range>_______</Range><ammo>Ginsen</ammo>
+			<head>Ptero. Armet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
 			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Ramuh Ring +1</lring><rring>Ambuscade Ring</rring>
 			<back>Atheling Mantle</back><waist>Cetl Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
 		</set>
-		<set name="Kogul_WS"><!--Weaponskill equip set-->
-            <Range>???</Range><ammo>Jukukik Feather</ammo>
-			<head>Peltast's Mezail +1</head><neck>Ancient Torque</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
-			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
-			<back>Kayapa Cape</back><waist>Fotia Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
+		<set name="Torment_WS"><!--Weaponskill equip set-->
+            <Range>_______</Range><ammo>Threw Bomblet</ammo>
+			<head>Ptero. Armet +1</head><neck>Tjukurrpa Medal</neck><lear>Vulcan's Pearl</lear><rear>Terra's Pearl</rear>
+			<body>Vishap Mail +1</body><hands>Pel. Vambraces +1</hands><lring>Ifrit Ring +1</lring><rring>Titan Ring +1</rring>
+			<back>Buquwik Cape</back><waist>Fotia Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Vishap Greaves +1</feet>
 	    </set>
 		<set name="Drakes_WS"><!--Weaponskill equip set-->
-            <Range>???</Range><ammo>Jukukik Feather</ammo>
+            <Range>_______</Range><ammo>Jukukik Feather</ammo>
 			<head>Peltast's Mezail +1</head><neck>Ancient Torque</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
 			<body>Pelt. Plackart +1</body><hands>Pel. Vambraces +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
 			<back>Kayapa Cape</back><waist>Fotia Belt</waist><legs>Pelt. Cuissots +1</legs><feet>Pelt. Schyn. +1</feet>
 	    </set>
 		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
 		    <ammo>Dosis Tathlum</ammo>
-			<head>???</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
-			<body>???</body><hands>???</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
-	        <back>Toro Cape</back><waist>Cimmerian Sash</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
+	        <back>Toro Cape</back><waist>Cimmerian Sash</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 		<set name="Ninjutsu_Buff"><!--When casting Buff Ninjutsu equip set.-->
 		    <ammo>Impatiens</ammo>
-			<head>???</head><neck>Ninjutsu Torque</neck><lear>Stealth Earring</lear><rear>Loquac. Earring</rear>
-			<body>???</body><hands>???</hands><lring>Weather. Ring</lring><rring>Prolix Ring</rring>
-	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>Enif Cosciales</legs><feet>???</feet>
+			<head>_______</head><neck>Ninjutsu Torque</neck><lear>Stealth Earring</lear><rear>Loquac. Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>Weather. Ring</lring><rring>Prolix Ring</rring>
+	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>Enif Cosciales</legs><feet>_______</feet>
 		</set>
 		<set name="Ninjutsu_Debuff"><!--When casting Debuff Ninjutsu equip set.-->
 		    <ammo>Impatiens</ammo>
-			<head>???</head><neck>Ninjutsu Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
-			<body>???</body><hands>???</hands><lring>Levia. Ring +1</lring><rring>Weather. Ring</rring>
-	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>???</legs><feet>???</feet>
+			<head>_______</head><neck>Ninjutsu Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>Levia. Ring +1</lring><rring>Weather. Ring</rring>
+	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 	</sets>
 
@@ -119,7 +119,7 @@ To do:
 	
 	<weaponskill>
 	    <if ad_name="Drakesbane"><equip set="Drakes_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
-		<if ad_name="Geirskogul"><equip set="Kogul_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="Camlann's Torment"><equip set="Torment_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
 	</weaponskill>
 	
 	<midmagic><!--When Casting-->
