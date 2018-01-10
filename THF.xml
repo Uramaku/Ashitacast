@@ -25,14 +25,14 @@ To do:
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
             <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
-			<head>Skulker's Bonnet +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
-			<body>Skulker's Vest +1</body><hands>Skulk. Armlets +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
-			<back>Iximulew Cape</back><waist>Flume Belt</waist><legs>Skulk. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
+			<head>Lustratio Cap +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
+			<body>Lustr. Harness +1</body><hands>Lustr. Mittens +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
+			<back>Iximulew Cape</back><waist>Flume Belt</waist><legs>Lustr. Subligar +1</legs><feet>Pill. Poulaines +1</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
             <main>Vajra</main><sub>Vajra</sub><Range>_______</Range><ammo>Ginsen</ammo>
-			<head>Skulker's Bonnet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
-			<body>Skulker's Vest +1</body><hands>Skulk. Armlets +1</hands><lring>Ramuh Ring +1</lring><rring>Epona's Ring</rring>
+			<head>Adhemar Bonnet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
+			<body>Adhemar Jacket +1</body><hands>Adhemar Wrist. +1</hands><lring>Ambuscade Ring</lring><rring>Epona's Ring</rring>
 			<back>Canny Cape</back><waist>Windbuffet Belt</waist><legs>Skulk. Culottes +1</legs><feet>Plun. Poulaines +1</feet>
 		</set>
 		<set name="Stab_WS"><!--Weaponskill equip set-->
