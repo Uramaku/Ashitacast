@@ -21,30 +21,32 @@ To do:
 	</settings>
 
 <!--Equip set for various thing's-->
-	
+
+<!--When not engaged. Stand equip set.-->
 	<sets>
-		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>Carnwenhan</main><sub>Genbu's Shield</sub><Range>_______</Range><ammo>_______</ammo>
-			<head>Bihu Roundlet +1</head><neck>Twilight Torque</neck><lear>Loquac. Earring</lear><rear>Aoidos' Earring</rear>
-			<body>Bihu Jstcorps +1</body><hands>Bihu Cuffs +1</hands><lring>Defending Ring</lring><rring>Weather. Ring</rring>
+		<set name="Stand">
+            <main>Carnwenhan</main><sub>Carnwenhan</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
+			<head>Bihu Roundlet +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
+			<body>Bihu Jstcorps +1</body><hands>Bihu Cuffs +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
 			<back>Hexerei Cape</back><waist>Flume Belt</waist><legs>Bihu Cannions +1</legs><feet>Fili Cothurnes +1</feet>
 		</set>	
-		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+<!--When you or engaged. Melee equip set.-->
+		<set name="Melee">
             <Range>_______</Range><ammo>Ginsen</ammo>
 			<head>Bihu Roundlet +1</head><neck>Portus Collar</neck><lear>Steelflash Earring</lear><rear>Bladeborn Earring</rear>
 			<body>Bihu Jstcorps +1</body><hands>Bihu Cuffs +1</hands><lring>Defending Ring</lring><rring>Ambuscade Ring</rring>
 			<back>Atheling Mantle</back><waist>Cetl Belt</waist><legs>Bihu Cannions +1</legs><feet>Bihu Slippers +1</feet>
 		</set>
 		<set name="Rime_WS"><!--Weaponskill equip set-->
-            <Range>_______</Range><ammo>_______</ammo>
-			<head>Fili Calot +1</head><neck>Fotia Gorget</neck><lear>Enchntr. Earring</lear><rear>Aoidos' Earring</rear>
+            <Range>_______</Range><ammo>Nazar Bonjuk</ammo>
+			<head>Fili Calot +1</head><neck>Dualism Collar</neck><lear>Enchntr. Earring</lear><rear>Aoidos' Earring</rear>
 			<body>Fili Hongreline +1</body><hands>Fili Manchettes +1</hands><lring>Carb. Ring +1</lring><rring>Carb. Ring +1</rring>
-			<back>Balladeer's Cape</back><waist>Fotia Belt</waist><legs>Bihu Cannions +1</legs><feet>Fili Cothurnes +1</feet>
+			<back>Balladeer's Cape</back><waist>Aristo Belt</waist><legs>Bihu Cannions +1</legs><feet>Fili Cothurnes +1</feet>
 	    </set>
 		<set name="Precast"><!--This place gear/accessories where there's none added.-->
-			<ammo>Impatiens</ammo>
+			<ammo>_______</ammo>
 			<head>Nares Cap</head><neck>_______</neck><lear><lear>Loquac. Earring</lear></lear><rear>_______</rear>
-			<body>Marduk's Jubbah +1</body><hands>Nebula Cuffs +1</hands><lring>Prolix Ring</lring><rring>Weather. Ring</rring>
+			<body>Marduk's Jubbah +1</body><hands>Magavan Mitts</hands><lring>Prolix Ring</lring><rring>Weather. Ring</rring>
 	        <back>Swith Cape +1</back><waist>Witful Belt</waist><legs>Nebula Slops +1</legs><feet>_______</feet>
 		</set>
 		<set name="SongPrecast"><!--This place gear/accessories where there's none added.-->
@@ -74,7 +76,7 @@ To do:
 		<set name="Magical_Buff"><!--Magical Enhancing equip set.-->
 			<main>Venabulum</main><sub>Vivid Strap +1</sub><Range>_______</Range><ammo>Impatiens</ammo>
 			<head>Nares Cap</head><neck>Enhancing Torque</neck><lear>Loquac. Earring</lear><rear>Augment. Earring</rear>
-			<body>Marduk's Jubbah +1</body><hands>Nebula Cuffs +1</hands><lring>Prolix Ring</lring><rring>Weather. Ring</rring>
+			<body>Marduk's Jubbah +1</body><hands>Magavan Mitts</hands><lring>Prolix Ring</lring><rring>Weather. Ring</rring>
 	        <back>Swith Cape +1</back><waist>Witful Belt</waist><legs>Nebula Slops +1</legs><feet>Bihu Slippers +1</feet>
 		</set>
 		<set name="Stoneskin" baseset="Magical_Buff">
@@ -128,14 +130,20 @@ To do:
 		<set name="Lullaby">
 		    <Range>Gjallarhorn</Range><ammo>_______</ammo>
 			<head>Bihu Roundlet +1</head><neck>Noetic Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
-			<body>Bihu Jstcorps +1</body><hands>Brioso Cuffs +1</hands><lring>Carb. Ring +1</lring><rring>Weather. Ring</rring>
+			<body>Bihu Jstcorps +1</body><hands>Brioso Cuffs +1</hands><lring>Renaye Ring</lring><rring>Weather. Ring</rring>
 	        <back>Rhapsode's Cape</back><waist>Ovate Rope</waist><legs>Bihu Cannions +1</legs><feet>Brioso Slippers +1</feet>
 		</set>
 		<set name="Carol">
 		    <Range>Daurdabla</Range><ammo>_______</ammo>
 			<head>Fili Calot +1</head><neck>Aoidos' Matinee</neck><lear>Loquac. Earring</lear><rear>Aoidos' Earring</rear>
 			<body>Fili Hongreline +1</body><hands>Mdk. Dastanas +1</hands><lring>Prolix Ring</lring><rring>Weather. Ring</rring>
-	        <back>Swith Cape</back><waist>Witful Belt</waist><legs>Mdk. Shalwar +1</legs><feet>Brioso Slippers +1</feet>
+	        <back>Swith Cape +1</back><waist>Witful Belt</waist><legs>Mdk. Shalwar +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="NinCast" baseset="Precast"><!--When casting Utsusemi equip set.-->
+		    <ammo>Impatiens</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 	</sets>
 
@@ -186,6 +194,9 @@ To do:
 	</premagic>
 	
 	<midmagic><!--When Casting-->
+	<if ad_skill="Ninjutsu">
+                <equip set="NinCast"/>
+           </if>
 	    <if ad_name="Army's Paeon*">
 			            <equip set="Paeon"/>
 					</if>
@@ -204,7 +215,7 @@ To do:
 			<if ad_name="Valor Minuet*|Knight's Minne*">
 			            <equip set="Minuet"/>
 					</if>
-			<if ad_name="*Carol*">
+			<if ad_name="Carol*">
 			            <equip set="Carol"/>
 					</if>
 			<if ad_name="Foe Lullaby*|Horde Lullaby*">
@@ -242,7 +253,7 @@ To do:
 					</if>
 			<if ad_name="Aquaveil">
 			            <equip set="Aquaveil"/>
-					</if>					
+					</if>				
          </elseif>		
     </midmagic>
 </ashitacast>

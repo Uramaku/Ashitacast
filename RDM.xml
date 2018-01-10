@@ -27,7 +27,7 @@ To do:
             <main>Murgleis</main><sub>Sors Shield</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
 			<head>Viti. Chapeau +1</head><neck>Twilight Torque</neck><lear>Bloodgem Earring</lear><rear>Stoic Earring</rear>
 			<body>Lethargy Sayon +1</body><hands>Leth. Gantherots +1</hands><lring>Renaye Ring</lring><rring>Defending Ring</rring>
-			<back>Hexerei Cape</back><waist>Flume Belt</waist><legs>Leth. Fuseau +1</legs><feet>Leth. Houseaux +1</feet>
+			<back>Hexerei Cape</back><waist>Flume Belt</waist><legs>Carmine Cuisses +1</legs><feet>Iaso Boots</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
             <main>Murgleis</main><sub>Sors Shield</sub><Range>_______</Range><ammo>Ginsen</ammo>
@@ -57,7 +57,7 @@ To do:
 			<main>Venabulum</main><sub>Fulcio Grip</sub><Range>_______</Range><ammo>Impatiens</ammo>
 			<head>Atrophy Chapeau +1</head><neck>Enhancing Torque</neck><lear>Augment. Earring</lear><rear>Estq. Earring</rear>
 			<body>Viti. Tabard +1</body><hands>Viti. Gloves +1</hands><lring>Weather. Ring</lring><rring>Prolix Ring</rring>
-	        <back>Estoqueur's Cape</back><waist>Olympus Sash</waist><legs>Atrophy Tights +1</legs><feet>Leth. Houseaux +1</feet>
+	        <back>Estoqueur's Cape</back><waist>Olympus Sash</waist><legs>Carmine Cuisses +1</legs><feet>Leth. Houseaux +1</feet>
 		</set>
 		<set name="Magical_DRK"><!--Magical Dark equip set.-->
 			<main>Venabulum</main><sub>Zuuxowu Grip</sub><Range>_______</Range><ammo>Dosis Tathlum</ammo>
@@ -69,7 +69,7 @@ To do:
 		    <main>Nibiru Cudgel</main><sub>Sors Shield</sub><Range>_______</Range><ammo>Impatiens</ammo>
 			<head>Atrophy Chapeau +1</head><neck>Fylgja Torque +1</neck><lear>Roundel Earring</lear><rear>Estq. Earring</rear>
 			<body>Viti. Tabard +1</body><hands>Leth. Gantherots +1</hands><lring>Lavia. Ring</lring><rring>Weather. Ring</rring>
-	        <back>Tempered Cape</back><waist>Witful Belt</waist><legs>Atrophy Tights +1</legs><feet>Leth. Houseaux +1</feet>	
+	        <back>Tempered Cape</back><waist>Witful Belt</waist><legs>Carmine Cuisses +1</legs><feet>Iaso Boots</feet>	
 		</set>
 		<set name="Stoneskin" baseset="Magical_Buff">
 		    <rear>Earthcry Earring</rear>

@@ -27,13 +27,13 @@ To do:
             <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
 			<head>Souv. Schaller +1</head><neck>Twilight Torque</neck><lear>Cassie Earring</lear><rear>Bloodgem Earring</rear>
 			<body>Souv. Cuirass +1</body><hands>Souv. Handsch. +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
-			<back>Weard Mantle</back><waist>Flume Belt +1</waist><legs>Souv. Diechlings +1</legs><feet>Souveran Schuhs +1</feet>
+			<back>Weard Mantle</back><waist>Flume Belt +1</waist><legs>Carmine Cuisses +1</legs><feet>Souveran Schuhs +1</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
             <Range>_______</Range><ammo>Iwatsubute</ammo>
 			<head>Souv. Schaller +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
-			<body>Souv. Cuirass +1</body><hands>Souv. Handsch. +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
-			<back>Weard Mantle</back><waist>Chuq'aba Belt</waist><legs>Souv. Diechlings +1</legs><feet>Souveran Schuhs +1</feet>
+			<body>Souv. Cuirass +1</body><hands>Souv. Handsch. +1</hands><lring>Kunaji Ring</lring><rring>Vocane Ring</rring>
+			<back>Mollusca Mantle</back><waist>Chuq'aba Belt</waist><legs>Souv. Diechlings +1</legs><feet>Souveran Schuhs +1</feet>
 		</set>
 		<set name="Magical_Divine"><!--Magical Attack equip set.-->
             <Range>_______</Range><ammo>_______</ammo>
@@ -51,7 +51,7 @@ To do:
 			<Range>_______</Range><ammo>_______</ammo>
 			<head>_______</head><neck>Enhancing Torque</neck><lear>Augmenting Earring</lear><rear>Loquac. Earring</rear>
 			<body>_______</body><hands>Souv. Handsch. +1</hands><lring>_______</lring><rring>>_______</rring>
-			<back>Mollusca Mantle</back><waist>Olympus Sash</waist><legs>Rev. Breeches +1</legs><feet>Souveran Schuhs +1</feet>
+			<back>Mollusca Mantle</back><waist>Olympus Sash</waist><legs>Carmine Cuisses +1</legs><feet>Souveran Schuhs +1</feet>
 		</set>
 		<set name="Uriel_WS"><!--Weaponskill equip set-->
             <Range>_______</Range><ammo>_______</ammo>
