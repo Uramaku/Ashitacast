@@ -1,0 +1,350 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {BLU} script for Ashitacast by Rizekai & Kenjigoku
+v2.1, 6/6/2018
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* Addon's to DNC.
+
+Info For Class: https://www.bg-wiki.com/bg/Blue_Mage
+===========================================================================================================================================
+-->
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+
+<!--Equip set for various thing's-->
+	
+	<sets>
+		<set name="Idle_Set"><!--When not engaged. Idle equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>	
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+        <set name="WS_1"><!--Weaponskill equip set-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="WS_2"><!--Weaponskill equip set-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="WS_3"><!--Weaponskill equip set-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_ACC"><!--BluMagic Magical Accuracy equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Physical_ACC"><!--BluMagic Physical Accuracy equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_Breath"><!--BluMagic Breath equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_Healing"><!--BluMagic Healing equip set. Add Cure Potency.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_Enbuff"><!--BluMagic General Buff equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Ninjutsu_Cast"><!--When casting Ninjutsu Utsusemi equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="FastCast"><!--For all your fastcast gear-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		
+<!--Physical Equip Set-->
+	
+        <set name="Physical_STR"><!--Physical strength mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set> 
+       <set name="Physical_DEX"><!--Physical dexterity mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Physical_AGI"><!--Physical agility mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Physical_VIT"><!--Physical vitality mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Physical_MND"><!--Physical mind mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Physical_INT"><!--Physical intelligence mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Physical_CHR"><!--Physical Charisma mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		
+<!--Magical Equip Set-->
+	
+		<set name="Magical_DEX"><!--Magical dexterity mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Magical_VIT"><!--Magical vitality mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Magical_CHR"><!--Magical charisma mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Magical_MND"><!--Magical mind mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+		<set name="Magical_INT"><!--Magical intelligence mod equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+        </set>
+	</sets>
+
+	<idlegear>
+        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
+		<else><equip set="Idle_Set" /></else><!--When not engaged this will equip "Stand Set"-->
+	</idlegear>
+
+	<jobability><!--jobability equip set.-->
+		<if ad_name="Burst Affinity"><equip><feet>>_______</feet></equip></if>
+		<if ad_name="Chain Affinity"><equip><head>>_______</head></equip></if>
+		<if ad_name="Convergence"><equip><head>>_______</head></equip></if>
+		<if ad_name="Diffusion"><equip><feet>>_______</feet></equip></if>
+		<if ad_name="Efflux"><equip><legs>>_______</legs></equip></if>
+		<if ad_name="Azure Lore"><equip><hands>>_______</hands></equip></if>
+	</jobability>
+	
+	<weaponskill>
+		<if ad_name="_______"><equip set="WS_1" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="_______"><equip set="WS_2" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="_______"><equip set="WS_3" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<premagic>
+	
+	 <if ad_skill="Ninjutsu">
+                <equip set="FastCast"/>
+           </if>
+		<if ad_skill="BlueMagic">
+			<if ad_name="Barrier Tusk|Diamondhide|Magic Barrier|Metallic Body|Plasma Charge|Pyric Bulwark|Reactor Cool">
+                        <equip set="FastCast"/><!--Buffs that depend on blue magic skill.-->
+					</if>
+			<elseif ad_name="Amplification|Animating Wail|Battery Charge|Carcharian Verve|Cocoon|Erratic Flutter|Exuviation|Fantod|Feather Barrier|Harden Shell|Memento Mori|Nat. Meditation|Occultation|Orcish Counterstance|Refueling|Regeneration|Saline Coat|Triumphant Roar|Warm-Up|Winds of Promyvion|Zephyr Mantle">
+                        <equip set="FastCast"/><!--Other general buffs.-->
+					</if>
+			<elseif ad_name="Healing Breeze|Magic Fruit|Plenilune Embrace|Pollen|Restoral|White Wind|Wild Carrot">
+                        <equip set="FastCast"/><!--Healing spells.-->
+					</if>
+			<elseif ad_name="Bad Breath|Flying Hip Press|Frost Breath|Heat Breath|Hecatomb Wave|Magnetite Cloud|Poison Breath|Radiant Breath|Self-Destruct|Thunder Breath|Vapor Spray|Wind Breath">
+                        <equip set="FastCast"/><!--Breath-based spells.-->
+					</if>
+			<elseif ad_name="Yawn|Blitzstrahl|Frypan|Head Butt|Sudden Lunge|Tail slap|Temporal Shift|Thunderbolt|Whirl of Rage">
+                        <equip set="FastCast"/><!--Stun spells.-->
+					</if>
+					
+<!--Physical ACC  / Magical ACC-->	
+		
+			<elseif ad_name="1000 Needles|Absolute Terror|Actinic Burst|Auroral Drape|Awful Eye|Blank Gaze|Blistering Roar|Blood Drain|Blood Saber|Chaotic Eye|Cimicine Discharge|Cold Wave|Corrosive Ooze|Demoralizing Roar|Digest|Dream Flower|Enervation|Feather Tickle|Filamented Hold|Frightful Roar|Geist Wall|Hecatomb Wave|Infrasonics|Jettatura|Light of Penance|Lowing|Mind Blast|Mortal Ray|MP Drainkiss|Osmosis|Reaving Wind|Sandspin|Sandspray|Sheep Song|Soporific|Sound Blast|Stinking Gas|Sub-zero Smash|Venom Shell|Voracious Trunk">
+                        <equip set="FastCast"/><!--Magical spells (generally debuffs) that we want to focus on magic accuracy over damage. Add Int for damage where available, though.-->
+					</if>							
+			<elseif ad_name="Heavy Strike">
+                        <equip set="FastCast"/><!--Spells with heavy accuracy penalties, that need to prioritize accuracy first.-->
+					</if>
+
+<!--Physical Mod-->				
+					
+			<elseif ad_name="Battle Dance|Bloodrake|Death Scissors|Dimensional Death|Empty Thrash|Quadrastrike|Sinker Drill|Spinal Cleave|Uppercut|Vertical Cleave">
+                        <equip set="FastCast"/><!--Physical spells with Str stat mod.-->
+					</if>		
+			<elseif ad_name="Amorphic Spikes|Asuran Claws|Barbed Crescent|Claw Cyclone|Disseverment|Foot Kick|Frenetic Rip|Goblin Rush|Hysteric Barrage|Paralyzing Triad|Seedspray|Sickle Slash|Smite of Rage|Terror Touch|Thrashing Assault|Vanity Dive">
+                        <equip set="FastCast"/><!--Physical spells with Dex stat mod.-->
+					</if>
+			<elseif ad_name="Benthic Typhoon|Feather Storm|Helldive|Hydro Shot|Jet Stream|Pinecone Bomb|Spiral Spin|Wild Oats">
+                        <equip set="FastCast"/><!--Physical spells with Agi stat mod.-->
+					</if>		
+			<elseif ad_name="Body Slam|Cannonball|Delta Thrust|Glutinous Dart|Grand Slam|Power Attack|Quad. Continuum|Sprout Smack|Sub-zero Smash">
+                        <equip set="FastCast"/><!--Physical spells with Vit stat mod.-->
+					</if>
+			<elseif ad_name="Ram Charge|Screwdriver|Tourbillion">
+                        <equip set="FastCast"/><!--Physical spells with Mnd stat mod.-->
+					</if>
+			<elseif ad_name="Mandibular Bite|Queasyshroom">
+                        <equip set="FastCast"/><!--Physical spells with Int stat mod.-->
+					</if>
+			<elseif ad_name="Bludgeon">
+                        <equip set="FastCast"/><!--Physical spells with Chr stat mod.-->
+					</if>						
+									
+<!--Magical Mod-->
+	
+			<elseif ad_name="Charged Whisker|Gates of Hades">
+                        <equip set="FastCast"/><!--Magical spells with a Dex stat mod. (on top of Int)-->
+					</if>
+			<elseif ad_name="Thermal Pulse">
+                        <equip set="FastCast"/><!--Magical spells with a Vit stat mod. (on top of Int)-->
+					</if>
+			<elseif ad_name="Acrid Stream|Evryone. Grudge|Magic Hammer|Mind Blast">
+                        <equip set="FastCast"/><!--Magical spells with a Mnd mod.-->
+					</if>		
+			<elseif ad_name="Blastbomb|Blazing Bound|Bomb Toss|Cursed Sphere|Dark Orb|Death Ray|Diffusion Ray|Droning Whirlwind|Embalming Earth|Firespit|Foul Waters|Ice Break|Leafstorm|Maelstrom|Rail Cannon|Regurgitation|Rending Deluge|Retinal Glare|Subduction|Tem. Upheaval|Water Bomb">
+                        <equip set="FastCast"/><!--Magical spells with the typical Int mod.-->
+					</if>	
+			<elseif ad_name="Eyes On Me|Mysterious Light">
+                        <equip set="FastCast"/><!--Magical spells with a Chr mod.-->
+             </if>
+			 
+         </elseif>		
+		
+	</premagic>
+	
+	<midmagic>
+        <if ad_skill="Ninjutsu">
+                <equip set="Ninjutsu_Cast"/>
+           </if>
+		<if ad_skill="BlueMagic">
+			<if ad_name="Barrier Tusk|Diamondhide|Magic Barrier|Metallic Body|Plasma Charge|Pyric Bulwark|Reactor Cool">
+                        <equip set="Magical_Enbuff"/><!--Buffs that depend on blue magic skill.-->
+					</if>
+			<elseif ad_name="Amplification|Animating Wail|Battery Charge|Carcharian Verve|Cocoon|Erratic Flutter|Exuviation|Fantod|Feather Barrier|Harden Shell|Memento Mori|Nat. Meditation|Occultation|Orcish Counterstance|Refueling|Regeneration|Saline Coat|Triumphant Roar|Warm-Up|Winds of Promyvion|Zephyr Mantle">
+                        <equip set="Magical_Enbuff"/><!--Other general buffs.-->
+					</if>
+			<elseif ad_name="Healing Breeze|Magic Fruit|Plenilune Embrace|Pollen|Restoral|White Wind|Wild Carrot">
+                        <equip set="Magical_Healing"/><!--Healing spells.-->
+					</if>
+			<elseif ad_name="Bad Breath|Flying Hip Press|Frost Breath|Heat Breath|Hecatomb Wave|Magnetite Cloud|Poison Breath|Radiant Breath|Self-Destruct|Thunder Breath|Vapor Spray|Wind Breath">
+                        <equip set="Magical_Breath"/><!--Breath-based spells.-->
+					</if>
+			<elseif ad_name="Yawn|Blitzstrahl|Frypan|Head Butt|Sudden Lunge|Tail slap|Temporal Shift|Thunderbolt|Whirl of Rage">
+                        <equip set="Magical_ACC"/><!--Stun spells.-->
+					</if>
+					
+<!--Physical ACC  / Magical ACC-->	
+		
+			<elseif ad_name="1000 Needles|Absolute Terror|Actinic Burst|Auroral Drape|Awful Eye|Blank Gaze|Blistering Roar|Blood Drain|Blood Saber|Chaotic Eye|Cimicine Discharge|Cold Wave|Corrosive Ooze|Demoralizing Roar|Digest|Dream Flower|Enervation|Feather Tickle|Filamented Hold|Frightful Roar|Geist Wall|Hecatomb Wave|Infrasonics|Jettatura|Light of Penance|Lowing|Mind Blast|Mortal Ray|MP Drainkiss|Osmosis|Reaving Wind|Sandspin|Sandspray|Sheep Song|Soporific|Sound Blast|Stinking Gas|Sub-zero Smash|Venom Shell|Voracious Trunk">
+                        <equip set="Magical_ACC"/><!--Magical spells (generally debuffs) that we want to focus on magic accuracy over damage. Add Int for damage where available, though.-->
+					</if>							
+			<elseif ad_name="Heavy Strike">
+                        <equip set="Physical_ACC"/><!--Spells with heavy accuracy penalties, that need to prioritize accuracy first.-->
+					</if>
+
+<!--Physical Mod-->				
+					
+			<elseif ad_name="Battle Dance|Bloodrake|Death Scissors|Dimensional Death|Empty Thrash|Quadrastrike|Sinker Drill|Spinal Cleave|Uppercut|Vertical Cleave">
+                        <equip set="Physical_STR"/><!--Physical spells with Str stat mod.-->
+					</if>		
+			<elseif ad_name="Amorphic Spikes|Asuran Claws|Barbed Crescent|Claw Cyclone|Disseverment|Foot Kick|Frenetic Rip|Goblin Rush|Hysteric Barrage|Paralyzing Triad|Seedspray|Sickle Slash|Smite of Rage|Terror Touch|Thrashing Assault|Vanity Dive">
+                        <equip set="Physical_DEX"/><!--Physical spells with Dex stat mod.-->
+					</if>
+			<elseif ad_name="Benthic Typhoon|Feather Storm|Helldive|Hydro Shot|Jet Stream|Pinecone Bomb|Spiral Spin|Wild Oats">
+                        <equip set="Physical_AGI"/><!--Physical spells with Agi stat mod.-->
+					</if>		
+			<elseif ad_name="Body Slam|Cannonball|Delta Thrust|Glutinous Dart|Grand Slam|Power Attack|Quad. Continuum|Sprout Smack|Sub-zero Smash">
+                        <equip set="Physical_VIT"/><!--Physical spells with Vit stat mod.-->
+					</if>
+			<elseif ad_name="Ram Charge|Screwdriver|Tourbillion">
+                        <equip set="Physical_MND"/><!--Physical spells with Mnd stat mod.-->
+					</if>
+			<elseif ad_name="Mandibular Bite|Queasyshroom">
+                        <equip set="Physical_INT"/><!--Physical spells with Int stat mod.-->
+					</if>
+			<elseif ad_name="Bludgeon">
+                        <equip set="Physical_CHR"/><!--Physical spells with Chr stat mod.-->
+					</if>						
+									
+<!--Magical Mod-->
+	
+			<elseif ad_name="Charged Whisker|Gates of Hades">
+                        <equip set="Magical_DEX"/><!--Magical spells with a Dex stat mod. (on top of Int)-->
+					</if>
+			<elseif ad_name="Thermal Pulse">
+                        <equip set="Magical_VIT"/><!--Magical spells with a Vit stat mod. (on top of Int)-->
+					</if>
+			<elseif ad_name="Acrid Stream|Evryone. Grudge|Magic Hammer|Mind Blast">
+                        <equip set="Magical_MND"/><!--Magical spells with a Mnd mod.-->
+					</if>		
+			<elseif ad_name="Blastbomb|Blazing Bound|Bomb Toss|Cursed Sphere|Dark Orb|Death Ray|Diffusion Ray|Droning Whirlwind|Embalming Earth|Firespit|Foul Waters|Ice Break|Leafstorm|Maelstrom|Rail Cannon|Regurgitation|Rending Deluge|Retinal Glare|Subduction|Tem. Upheaval|Water Bomb">
+                        <equip set="Magical_INT"/><!--Magical spells with the typical Int mod.-->
+					</if>	
+			<elseif ad_name="Eyes On Me|Mysterious Light">
+                        <equip set="Magical_CHR"/><!--Magical spells with a Chr mod.-->
+             </if>
+         </elseif>		
+    </midmagic>
+</ashitacast>
