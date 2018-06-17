@@ -1,0 +1,371 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {BRD} script for Ashitacast by Rizekai & Kenjigoku
+v2.1, 6/17/2018
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* None at present.
+===========================================================================================================================================
+-->
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+
+<!--Equip set for various thing's-->
+
+<!--When not engaged. Idle equip set.-->
+	<sets>
+		<set name="Idle_Set">
+            <main>Sangoma</main><sub>Genmei Shield</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>Bihu Roundlet +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
+			<body>Bihu Jstcorps +1</body><hands>Bihu Cuffs +1</hands><lring>Tamas Ring</lring><rring>Renaye Ring</rring>
+			<back>Hexerei Cape</back><waist>Flume Belt</waist><legs>Bihu Cannions +1</legs><feet>Fili Cothurnes +1</feet>
+		</set>	
+<!--When you or engaged. Melee equip set.-->
+		<set name="Melee">
+            <Range>_______</Range>
+			<head>Bihu Roundlet +1</head><neck>Lissome Necklace</neck><lear>Telos Earring</lear><rear>Brutal Earring</rear>
+			<body>Bihu Jstcorps +1</body><hands>Bihu Cuffs +1</hands><lring>Rajas Ring</lring><rring>Ambuscade Ring</rring>
+			<back>Letalis Mantle</back><waist>Cetl Belt</waist><legs>Jokushu Haidate</legs><feet>Bihu Slippers +1</feet>
+		</set>
+		<set name="Rime_WS"><!--Weaponskill equip set-->
+            <Range>_______</Range>
+			<head>Fili Calot +1</head><neck>Fotia Gorget</neck><lear>Enchntr. Earring</lear><rear>Aoidos' Earring</rear>
+			<body>Fili Hongreline +1</body><hands>Fili Manchettes +1</hands><lring>Carbuncle Ring +1</lring><rring>Carbuncle Ring +1</rring>
+			<back>Balladeer's Cape</back><waist>Fotia Belt</waist><legs>Bihu Cannions +1</legs><feet>Fili Cothurnes +1</feet>
+	    </set>
+		<set name="Exent_WS"><!--Weaponskill equip set-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>Brioso Roundlet +1</head><neck>Fotia Gorget</neck><lear>Auster's Pearl</lear><rear>>Auster's Pearl</rear>
+			<body>Bihu Jstcorps +1</body><hands>Fili Manchettes +1</hands><lring>Garuda Ring +1</lring><rring>Garuda Ring +1</rring>
+	        <back>Ik Cape</back><waist>Fotia Belt</waist><legs>Jokushu Haidate</legs><feet>Bihu Slippers +1</feet>
+		</set>
+		<set name="Rudra's_WS"><!--Weaponskill equip set-->
+            <ammo>_______</ammo>
+			<head>Lustratio Cap +1</head><neck>Fotia Gorget</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
+			<body>Bihu Jstcorps +1</body><hands>Lustr. Mittens +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
+			<back>Kayapa Cape</back><waist>Fotia Belt</waist><legs>Lustr. Subligar +1</legs><feet>Lustra. Leggings +1</feet>
+		</set>
+		<set name="FastCast">
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>Impatiens</ammo>
+			<head>Nares Cap</head><neck>_______</neck><lear>Loquac. Earring</lear><rear>_______</rear>
+			<body>Marduk's Jubbah +1</body><hands>Magavan Mitts</hands><lring>Rahab Ring</lring><rring>Weather. Ring</rring>
+	        <back>Swith Cape +1</back><waist>Witful Belt</waist><legs>Nebula Slops +1</legs><feet>_______</feet>	
+		</set>
+		<set name="SongPreCast">
+		    <main>Sangoma</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>Nares Cap</head><neck>Aoidos' Matinee</neck><lear>Loquac. Earring</lear><rear>Aoidos' Earring</rear>
+			<body>Sheikh Manteel</body><hands>Magavan Mitts</hands><lring>Rahab Ring</lring><rring>Weather. Ring</rring>
+	        <back>Swith Cape +1</back><waist>Witful Belt</waist><legs>Fili Rhingrave +1</legs><feet>Bihu Slippers +1</feet>
+		</set>
+	    <set name="Magical_ATK"><!--Magical Attack equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="Magical_ACC"><!--Magical Mnd Accuracy equip set.-->
+            <Range>Gjallarhorn</Range><ammo>_______</ammo>
+			<head>Bihu Roundlet +1</head><neck>Noetic Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
+			<body>Bihu Jstcorps +1</body><hands>Fili Manchettes +1</hands><lring>>Rahab Ring</lring><rring>Weather. Ring</rring>
+	        <back>Rhapsode's Cape</back><waist>Ovate Rope</waist><legs>Bihu Cannions +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="Magical_Buff"><!--Magical Enhancing equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>Augment. Earring</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="Magical_DRK"><!--Magical Dark equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="Cure"><!--Magical Healing equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>Brioso Roundlet +1</head><neck>Fylgja Torque</neck><lear>_______</lear><rear>_______</rear>
+			<body>Bihu Jstcorps +1</body><hands>Brioso Cuffs +1</hands><lring>Ephedra Ring</lring><rring>Ephedra Ring</rring>
+	        <back>Tempered Cape</back><waist>Ovate Rope</waist><legs>Bihu Cannions +1</legs><feet>Fili Cothurnes +1</feet>	
+		</set>
+		<set name="Stoneskin">
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>Earthcry Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>Siegel Sash</waist><legs>Shedir Seraweels</legs><feet>_______</feet>
+		</set>
+		<set name="Aquaveil">
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>Emphatikos Rope</waist><legs>Shedir Seraweels</legs><feet>_______</feet>
+		</set>
+		<set name="PowerShell">
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>Brachyura Earring</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>Sheltered Ring</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Scherzo">
+		    <Range>Daurdabla</Range><ammo>_______</ammo>
+			<head>_______</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Mdk. Shalwar +1</legs><feet>Fili Cothurnes +1</feet>
+		</set>
+		<set name="Paeon">
+		    <Range>Daurdabla</Range><ammo>_______</ammo>
+			<head>Brioso Roundlet +1</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Mdk. Shalwar +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="A&V_March">
+		    <Range>Daurdabla</Range><ammo>_______</ammo>
+			<head>_______</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>Fili Manchettes +1</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Mdk. Shalwar +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="S&B_Madrigal">
+		    <Range>Daurdabla</Range><ammo>_______</ammo>
+			<head>Fili Calot +1</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Mdk. Shalwar +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="Ballad">
+		    <Range>Daurdabla</Range><ammo>_______</ammo>
+			<head>_______</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Fili Rhingrave +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="Minuet">
+		    <Range>Daurdabla</Range><ammo>_______</ammo>
+			<head>_______</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Mdk. Shalwar +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="Lullaby">
+		    <Range>Gjallarhorn</Range><ammo>_______</ammo>
+			<head>_______</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>Brioso Cuffs +1</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Fili Rhingrave +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+		<set name="Carol">
+		    <Range>Daurdabla</Range><ammo>_______</ammo>
+			<head>_______</head><neck>Aoidos' Matinee</neck><lear>_______</lear><rear>_______</rear>
+			<body>Fili Hongreline +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Mdk. Shalwar +1</legs><feet>Brioso Slippers +1</feet>
+		</set>
+	</sets>
+
+	<idlegear>
+        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
+		<else><equip set="Idle_Set" /></else><!--When not engaged this will equip "Idle Set"-->
+	</idlegear>
+
+	<jobability><!--jobability equip set.-->
+	    <if ad_name="Soul Voice">
+		<equip>
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>Bihu Cannions +1</legs><feet>_______</feet>
+		    </equip>
+		</if>
+		<if ad_name="Troubadour">
+		<equip>
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>Bihu Justaucorps +1</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		    </equip>
+		</if>
+		<if ad_name="Nightingale">
+	    <equip>
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>Bihu Slippers +1</feet>
+		    </equip>
+		</if>
+		<if ad_name="Foe Sirvente">
+        <equip>
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>Bihu Roundlet +1</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		    </equip>
+		</if>
+		<if ad_name="Adventurer's Dirge">
+		<equip>
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>Bihu Cuffs +1</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		    </equip>
+		</if>
+		<if ad_name="Pianissimo">
+		        <registerbuff id="409" />
+			</if>
+	</jobability>
+	
+	<weaponskill>
+		<if ad_name="Mordant Rime"><equip set="Rime_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="Exenterator"><equip set="Exent_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="Rudra's Storm"><equip set="Rudra's_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<premagic>
+	
+	<if ad_type="BardSong">
+	    <equip set="SongPreCast" />
+		    </if>
+	<else>
+	<equip set="FastCast" />
+	        </else>
+		    <if ad_type="Whitemagic">  							
+                <if ad_skill="Healingmagic">
+                    <if ad_name="Cure*|Cura*|Raise*|Reraise*|Cursna|Silena|Stona|Esuna|Silena|Poisona|Viruna|Paralyna|Blindna">
+				       <equip set="FastCast"/>
+                 </if>
+            </if>
+				<elseif ad_skill="Divinemagic">
+                    <if ad_name="Banish*|Banishga*|Holy*|Flash|Repose">
+                        <equip set="FastCast"/>
+					</if>	
+            </elseif>   
+        <elseif ad_skill="EnhancingMagic">
+			<if ad_name="En*|Bar*|Phalanx*|Blink|Haste*|Protect*|Shell*|Refresh*|Sneak|Invisible|Flurry*|Rainstorm*|Sandstorm*|Windstorm*|Firestorm*|Hailstorm*|Thunderstorm*|Regen*|Voidstorm*|Erase|*Spikes|Gain*|Temper|Teleport|Deodorize">
+                        <equip set="FastCast"/>
+					</if>
+			<if ad_name="Protect*|Shell*">
+			            <equip set="FastCast"/>
+				    </if>
+			<if ad_name="Stoneskin">
+			            <equip set="FastCast"/>
+					</if>
+			<if ad_name="Aquaveil">
+			            <equip set="FastCast"/>
+					</if>
+			<if ad_name="Blaze Spikes|Ice Spikes|Shock Spikes">
+			            <equip set="FastCast"/>
+					</if>
+            </elseif>		 
+        </elseif>
+		<elseif ad_skill="EnfeeblingMagic">
+			<if ad_name="Paralyze*|Slow*|Silence|Dia*|Blind*|Poison*|Gravity*|Bind|Sleep*|Break|Distract*|Addle">
+                        <equip set="FastCast"/>
+					</if>
+		    </elseif>
+        <elseif ad_type="Blackmagic">          
+             <if ad_skill="Elementalmagic">
+                    <if ad_name="Blizzard*|Blizzaga*|Fire*|Firaga*|Aero*|Aeroga*|Stone*|Stonega*|Thunder*|Thundaga*|Water*|Waterga*|Geohelix*|Hydrohelix*|Anemohelix*|Pyrohelix*|Cryohelix*|Ionohelix*|Noctohelix*|Luminohelix*">				
+                        <equip set="FastCast"/>         
+				 </if>
+			  </if>
+			</elseif>
+        <elseif ad_skill="Darkmagic">
+		            <if ad_name="Aspir|Drain|Bio*|Kaustra|Tractor">
+                        <equip set="FastCast"/>
+					</if>	
+            </elseif>
+	</premagic>
+	
+	<midmagic><!--When Casting-->
+	
+		<if ad_type="BardSong">
+				<if ad_name="Foe Lullaby*|Horde Lullaby*">
+					<equip set="Magical_ACC">
+					    <hands>Brioso Cuffs +1</hands>
+				    <return />
+				</equip>
+			</if>
+		</if>
+		<if ad_name="Army's Paeon*">
+			            <equip set="Paeon"/>
+					</if>
+			<if ad_name="Sentinel's Scherzo">
+			            <equip set="Scherzo"/>
+					</if>
+			<if ad_name="Advancing March|Victory March">
+			            <equip set="A&V_March"/>
+					</if>		
+			<if ad_name="Sword Madrigal|Blade Madrigal|Hunter's Prelude|Archer's Prelude">
+			            <equip set="S&B_Madrigal"/>
+					</if>
+			<if ad_name="Mage's Ballad*">
+			            <equip set="Ballad"/>
+					</if>
+			<if ad_name="Valor Minuet*|Knight's Minne*">
+			            <equip set="Minuet"/>
+					</if>
+			<if ad_name="Carol*">
+			            <equip set="Carol"/>
+					</if>
+			<elseif ad_name="Pining Nocturne|Foe Requiem*|*Elegy|Magic Finale|*Threnody">
+					    <equip set="Magical_ACC" />
+					<return />
+			    </elseif>				
+        <if ad_type="Whitemagic">  							
+                <if ad_skill="Healingmagic">
+                    <if ad_name="Cure*|Cura*|Raise*|Reraise*|Cursna|Silena|Stona|Esuna|Silena|Poisona|Viruna|Paralyna|Blindna">
+					    <equip set="Cure"/>
+                 </if>
+            </if>
+				<elseif ad_skill="Divinemagic">
+                    <if ad_name="Banish*|Banishga*|Holy*|Flash|Repose">
+                        <equip set="Magical_Divine"/>  
+					</if>
+            </elseif>					
+        <elseif ad_skill="EnhancingMagic">
+			<if ad_name="En*|Bar*|Phalanx*|Blink|Haste*|Protect*|Shell*|Refresh*|Sneak|Invisible|Flurry*|Rainstorm*|Sandstorm*|Windstorm*|Firestorm*|Hailstorm*|Thunderstorm*|Regen*|Voidstorm*|Erase|*Spikes|Gain*|Temper|Teleport|Deodorize">
+                        <equip set="Magical_Buff"/>
+					</if>
+			<if ad_name="Protect*|Shell*">
+			            <equip set="PowerShell"/>
+				    </if>
+			<if ad_name="Stoneskin">
+			            <equip set="Stoneskin"/>
+					</if>
+			<if ad_name="Aquaveil">
+			            <equip set="Aquaveil"/>
+					</if>
+            </elseif>		 
+		<elseif ad_skill="EnfeeblingMagic">
+			<if ad_name="Paralyze*|Slow*|Silence|Dia*|Blind*|Poison*|Gravity*|Bind|Sleep*|Break|Distract*|Addle">
+                        <equip set="Magical_ACC"/>
+					</if>
+		    </elseif>
+        <elseif ad_type="Blackmagic">          
+             <if ad_skill="Elementalmagic">
+                    <if ad_name="Blizzard*|Blizzaga*|Fire*|Firaga*|Aero*|Aeroga*|Stone*|Stonega*|Thunder*|Thundaga*|Water*|Waterga*|Geohelix*|Hydrohelix*|Anemohelix*|Pyrohelix*|Cryohelix*|Ionohelix*|Noctohelix*|Luminohelix*">				
+                         <equip set="Magical_ATK"/>
+				  </if>
+			</if>
+        <elseif ad_skill="Darkmagic">
+			        <if ad_name="Aspir|Drain|Bio*|Kaustra|Tractor">	
+	                <equip set="Magical_DRK"/>
+				</if>  
+            </elseif>     
+		</elseif>
+        <if ad_skill="Ninjutsu">
+		    <if ad_name="Utsusemi*|Tonko*|Monomi">
+                <equip set="FastCast"/>
+        </if>
+            <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+                <equip set="Magical_ATK"/>
+		</if>
+			 <elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+                <equip set="Magical_ACC"/>
+		</if>
+         </elseif>		  
+			</elseif> 
+    </midmagic>
+</ashitacast>
