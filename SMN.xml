@@ -1,0 +1,381 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {SMN} script for Ashitacast by Rizekai & Kenjigoku
+v2.1, 7/5/2018
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* Addon's to DNC,BLU an RUN Soon.
+===========================================================================================================================================
+-->
+
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+	
+	<sets>
+	    <set name="Idle_Set"><!--When not engaged. Stand equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="WS_1"><!--Weaponskill equip set-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="WS_2"><!--Weaponskill equip set-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="WS_3"><!--Weaponskill equip set-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Cure"><!--Magical Healing equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="FastCast">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+	    <set name="Magical_ATK"><!--Magical Attack equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_ACC"><!--Magical Mnd Accuracy equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_Buff"><!--Magical Enhancing equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Summon">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="BP-Delay">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="BP-Enhancing">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="BP-Enfeebling">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="BP-Magical">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="BP-Physical">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="BP-Perfect Defense">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="BP-Hybrid">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Siphon">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Spirit">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+	</sets>
+	
+	<idlegear>
+    <if P_status="engaged"><equip set="Melee" />
+	    </if>
+		<else>
+		    <equip set="Idle_Set" />
+		</else>
+	</idlegear>
+	
+	<jobability><!--jobability equip set.-->
+	<if ad_name="
+                |Shining Ruby|Glittering Ruby|
+                |Crimson Howl|Inferno Howl|
+                |Frost Armor|Crystal Blessing|
+                |Aerial Armor|Hastega II|Fleet Wind|Hastega|
+                |Earthen Ward|Earthen Armor|
+                |Rolling Thunder|Lightning Armor|
+                |Soothing Current|
+                |Ecliptic Growl|Ecliptic Howl|Heavenward Howl|
+                |Noctoshield|Dream Shroud|
+                |Altana's Favor|Reraise*|Raise*|
+               
+                |Diamond Storm|Sleepga|
+                |Shock Squall|
+                |Slowga|Tidal Roar|
+                |Pavor Nocturnus|Ultimate Terror|Nightmare|
+                |Mewing Lullaby|Eerie Eye|
+               
+                |Healing Ruby*|Whispering Wind|Spring Water|
+               
+                |Poison Nails|
+                |Double Punch|Punch|
+                |Axe Kick|Rush|Slap|
+                |Claw|Predator Claws|
+                |Rock Buster|Mountain Buster|Rock Throw|Crag Throw|Megalith Throw|
+                |Chaotic Strike|Volt Strike|
+                |Tail Whip|Spinning Dive|Barracuda Dive|
+                |Crescent Fang|Eclipse Bite|Moonlit Charge|
+                |Blindside|Camisado|
+                |Regal Scratch|Regal Gash|
+               
+                |Burning Strike|Flaming Crush|
+                |Searing Light|Meteorite|Holy Mist|
+                |Inferno|Fire II|Fire IV|Meteor Strike|Conflag Strike|
+                |Diamond Dust|Blizzard II|Blizzard IV|Heavenly Strike|
+                |Aerial Blast|Aero II|Aero IV|Wind Blade|
+                |Earthen Fury|Stone II|Stone IV|Geocrush|
+                |Judgement Bolt|Thunder II|Thunder IV|Thunderstorm|Thunderspark|
+                |Tidal Wave|Water II|Water IV|Grand Fall|
+                |Howling Moon|Lunar Bay|
+                |Ruinous Omen|Somnolence|Nether Blast|Night Terror|
+                |Level ? Holy">
+    <equip set="BP-Delay" />
+        </if>
+        <elseif ad_name="Mana Cede"><equip set="Mana Cede" /></elseif>
+        <elseif ad_name="Astral Flow"><equip set="Astral Flow" /></elseif>
+	<if ad_name="Astral Flow">
+		<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</equip>
+		    </if>
+	<if ad_name="Elemental Siphon">
+		<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</equip>
+		    </if>
+	<if ad_name="Apogee">
+		<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</equip>
+		    </if>
+	<if ad_name="Mana Cede">
+		<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</equip>
+		    </if>
+	<if ad_name="Astral Conduit">
+		<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</equip>
+		    </if>
+	</jobability>
+	
+	<weaponskill>
+	<if ad_name="_______"><equip set="WS_1" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	<if ad_name="_______"><equip set="WS_2" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	<if ad_name="_______"><equip set="WS_3" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<premagic>	
+	<equip set="FastCast"/>
+	<if ad_type="Whitemagic">  							
+        <if ad_skill="Healingmagic">
+            </if>   
+            <elseif ad_skill="Enhancingmagic">
+                </elseif>		 
+		    <elseif ad_skill="Enfeeblingmagic">
+		        </elseif>
+	</if>
+    <elseif ad_type="Blackmagic">          
+        <if ad_skill="Elementalmagic">
+		    </if>
+	</elseif>
+            <elseif ad_skill="Darkmagic">
+                </elseif>   
+	    <if ad_skill="Ninjutsu">
+			</if>		
+	</premagic>
+	
+	<midmagic>
+	<if ad_name="Ifrit|Shiva|Garuda|Fenrir|Carbuncle|Titan|Ramuh|Levia*">
+	        <equip set="Summon" />
+	</if>
+	<if ad_name="*Siphon">
+            <equip set="Siphon" />
+            <elseif ad_name="*Spirit">
+                <equip set="Siphon" />
+			</if>
+		<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</equip>
+            </elseif>
+	<if ad_type="Whitemagic">  							
+        <if ad_skill="Healingmagic">
+			<equip set="Cure"/>
+            </if>					
+    <elseif ad_skill="Enhancingmagic">
+            <equip set="Magical_Buff"/>
+    </elseif>		 
+	    <elseif ad_skill="Enfeeblingmagic">
+            <equip set="Magical_ACC"/>
+			</elseif>
+	</if>
+    <elseif ad_type="Blackmagic">          
+        <if ad_skill="Elementalmagic">			
+            <equip set="Magical_ATK"/>
+			</if>
+         <elseif ad_skill="Enfeeblingmagic">
+		    <equip set="Magical_ACC"/>
+		    </elseif>			
+	</elseif>
+    <if ad_skill="Ninjutsu">
+		<if ad_name="Utsusemi*|Tonko*|Monomi">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+            </if>
+        <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+            <equip set="Magical_ATK"/>
+			</elseif>
+	</if>
+			<elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+            <equip set="Magical_ACC"/>		
+         </elseif>		
+    </midmagic>
+	
+	    <petskill>
+        <if ad_name="
+                |Shining Ruby|Glittering Ruby|
+                |Crimson Howl|Inferno Howl|
+                |Frost Armor|Crystal Blessing|
+                |Aerial Armor|Hastega II|Fleet Wind|Hastega|
+                |Earthen Ward|Earthen Armor|
+                |Rolling Thunder|Lightning Armor|
+                |Soothing Current|
+                |Ecliptic Growl|Ecliptic Howl|Heavenward Howl|
+                |Noctoshield|Dream Shroud|
+                |Altana's Favor|Reraise*|Raise*">
+        <equip set="BP-Enhancing"/>
+		    </if>
+            <elseif ad_name="Impact|Alexander|Atomos|Odin">
+                <equip set="BP-Perfect Defense" />
+            </elseif>
+            <elseif ad_name="
+                |Diamond Storm|Sleepga|
+                |Shock Squall|
+                |Slowga|Tidal Roar|
+                |Pavor Nocturnus|Ultimate Terror|Nightmare|
+                |Mewing Lullaby|Eerie Eye">
+            <equip set="BP-Enfeebling" />
+            </elseif>
+            <elseif ad_name="Healing Ruby*|Whispering Wind|Spring Water">
+            <equip set="BP-Healing" />
+            </elseif>
+            <elseif ad_name="
+                |Poison Nails|
+                |Double Punch|Punch|
+                |Axe Kick|Rush|Slap|
+                |Claw|Predator Claws|
+                |Rock Buster|Mountain Buster|Rock Throw|Crag Throw|Megalith Throw|
+                |Chaotic Strike|Volt Strike|
+                |Tail Whip|Spinning Dive|Barracuda Dive|
+                |Crescent Fang|Eclipse Bite|Moonlit Charge|
+                |Blindside|Camisado|
+                |Regal Scratch|Regal Gash">
+            <equip set="BP-Physical" />
+            </elseif>
+            <elseif ad_name="Burning Strike|Flaming Crush">
+            <equip set="BP-Hybrid" />
+            </elseif>
+            <elseif ad_name="
+                |Searing Light|Meteorite|Holy Mist|
+                |Inferno|Fire II|Fire IV|Meteor Strike|Conflag Strike|
+                |Diamond Dust|Blizzard II|Blizzard IV|Heavenly Strike|
+                |Aerial Blast|Aero II|Aero IV|Wind Blade|
+                |Earthen Fury|Stone II|Stone IV|Geocrush|
+                |Judgement Bolt|Thunder II|Thunder IV|Thunderstorm|Thunderspark|
+                |Tidal Wave|Water II|Water IV|Grand Fall|
+                |Howling Moon|Lunar Bay|
+                |Ruinous Omen|Somnolence|Nether Blast|Night Terror|
+                |Level ? Holy">
+                <equip set="BP-Magical" />
+            </elseif>
+    </petskill>
+</ashitacast>
