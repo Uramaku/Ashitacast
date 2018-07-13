@@ -1,7 +1,7 @@
 <!--
 ===========================================================================================================================================
 Ura & Takime {THF} script for Ashitacast by Rizekai & Kenjigoku
-v2.1, 6/17/2018
+v2.1, 07/13/18
 
 Server: Realms of Jova
 
@@ -24,110 +24,170 @@ To do:
 	
 	<sets>
 		<set name="Stand"><!--When not engaged. Stand equip set.-->
-            <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>Iwatsubute</ammo>
-			<head>Adhemar Bonnet +1</head><neck>Twilight Torque</neck><lear>Oneiros Earring</lear><rear>Bloodgem Earring</rear>
-			<body>Adhemar Jacket +1</body><hands>Adhemar Wrist. +1</hands><lring>Defending Ring</lring><rring>Vocane Ring</rring>
-			<back>Iximulew Cape</back><waist>Flume Belt</waist><legs>Skulk. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>	
 		<set name="Melee"><!--When you or engaged. Melee equip set.-->
-            <main>Vajra</main><sub>Vajra</sub><Range>_______</Range><ammo>Ginsen</ammo>
-			<head>Adhemar Bonnet +1</head><neck>Lissome Necklace</neck><lear>Telos Earring</lear><rear>Brutal Earring</rear>
-			<body>Adhemar Jacket +1</body><hands>Adhemar Wrist. +1</hands><lring>Rajas Ring</lring><rring>Epona's Ring</rring>
-			<back>Canny Cape</back><waist>Windbuffet Belt</waist><legs>Skulk. Culottes +1</legs><feet>Plun. Poulaines +1</feet>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>
-		<set name="Stab_WS"><!--Weaponskill equip set-->
-            <ammo>Jukukik Feather</ammo>
-			<head>Lustratio Cap +1</head><neck>Fotia Gorget</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
-			<body>Adhemar Jacket +1</body><hands>Lustr. Mittens +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
-			<back>Canny Cape</back><waist>Fotia Belt</waist><legs>Lustr. Subligar +1</legs><feet>Lustra. Leggings +1</feet>
+		<set name="WS_1"><!--Weaponskill equip set-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 	    </set>
-		<set name="Storm_WS"><!--Weaponskill equip set-->
-            <ammo>Jukukik Feather</ammo>
-			<head>Lustratio Cap +1</head><neck>Fotia Gorget</neck><lear>Jupiter's Pearl</lear><rear>Jupiter's Pearl</rear>
-			<body>Adhemar Jacket +1</body><hands>Lustr. Mittens +1</hands><lring>Ramuh Ring +1</lring><rring>Ramuh Ring +1</rring>
-			<back>Canny Cape</back><waist>Fotia Belt</waist><legs>Lustr. Subligar +1</legs><feet>Lustra. Leggings +1</feet>
+		<set name="WS_2"><!--Weaponskill equip set-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="WS_3"><!--Weaponskill equip set-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 	    </set>
-		<set name="Ninjutsu_Ele"><!--When casting Elemental Ninjutsu equip set.-->
-		    <ammo>Dosis Tathlum</ammo>
-			<head>Pill. Bonnet +1</head><neck>Stoicheion Medal</neck><lear>Friomisi Earring</lear><rear>Novio Earring</rear>
-			<body>Pillager's Vest +1</body><hands>Pill. Armlets +1</hands><lring>Fenrir Ring +1</lring><rring>Fenrir Ring +1</rring>
-	        <back>Toro Cape</back><waist>Cimmerian Sash</waist><legs>Plun. Culottes +1</legs><feet>Plun. Poulaines +1</feet>
+		<set name="FastCast">
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>
-		<set name="Ninjutsu_Buff"><!--When casting Buff Ninjutsu equip set.-->
-		    <ammo>Impatiens</ammo>
-			<head>Herculean Helm</head><neck>Magoraga Beads</neck><lear>Stealth Earring</lear><rear>Loquac. Earring</rear>
-			<body>???</body><hands>???</hands><lring>Weather. Ring</lring><rring>Prolix Ring</rring>
-	        <back>Mujin Mantle</back><waist>Cimmerian Sash</waist><legs>???</legs><feet>Pill. Poulaines +1</feet>
+		<set name="Magical_ATK"><!--When casting Elemental Ninjutsu equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>
-		<set name="Ninjutsu_Debuff"><!--When casting Debuff Ninjutsu equip set.-->
-		    <ammo>Impatiens</ammo>
-			<head>Plun. Bonnet +1</head><neck>Ninjutsu Torque</neck><lear>Lifestorm Earring</lear><rear>Psystorm Earring</rear>
-			<body>Plunderer's Vest +1</body><hands>Pill. Armlets +1</hands><lring>Carb. Ring +1</lring><rring>Weather. Ring</rring>
-	        <back>_______</back><waist>Cimmerian Sash</waist><legs>Plun. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
+		<set name="Magical_ACC"><!--When casting Debuff Ninjutsu equip set.-->
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		</set>
 	</sets>
+	
+	<variables>
+		<var name="TH" value="0" />
+		<var name="TH">0</var>
+	</variables>
+	
+	<inputcommands>
+		<cmd input="/th">
+			<if advanced="$TH=0">
+				<setvar name="TH" value="1" />
+				<addtochat color="122">Treasure Mode Activated!</addtochat>
+			</if>
+			<else>
+				<setvar name="TH" value="0" />
+				<addtochat color="122">Treasure Mode Disable!</addtochat>
+			</else>
+		</cmd>
+	</inputcommands>
 
 	<idlegear>
-        <if P_status="engaged"><equip set="Melee" /></if><!--When engaged this will equip "Melee Set"-->
-		<else><equip set="Stand" /></else><!--When not engaged this will equip "Stand Set"-->
+    <if P_status="engaged"><!--When engaged this will equip "Melee Set"-->
+		    <equip set="Melee" />
+		</if>
+	<else>
+		<equip set="Stand" /><!--When not engaged this will equip "Stand Set"-->
+	    </else>
+		<!--In ur macro use "/th" to use this line below-->
+		<if advanced="$TH=1">
+	<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+	</equip>		
+		</if>
 	</idlegear>
 
 	<jobability><!--jobability equip set.-->
 	    <if ad_name="Sneak Attack">
 		    <equip>
-		        <hands>Skulk. Armlets +1</hands>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		    </equip>
 		</if>
 		<if ad_name="Trick Attack">
 			<equip>
-		        <hands>Pill. Armlets +1</hands>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		    </equip>
 		</if>
 		<if ad_name="Hide">
 			<equip>
-		        <body>Pillager's Vest +1</body><lring>Gorney Ring</lring>
-				<waist>Chaac Belt</waist>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		    </equip>
 		</if>
 		<if ad_name="Steal">
 			<equip>
-		        <neck>Pentalagus Charm</neck>
-				<hands>Thief's Kote</hands><lring>Gorney Ring</lring><rring>Rogue's Ring</rring>
-				<legs>Pill. Culottes +1</legs><feet>Pill. Poulaines +1</feet>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		    </equip>
+		</if>
+		<if ad_name="Collaborator">
+			<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		    </equip>
+		<if ad_name="Conspirator">
+			<equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		    </equip>	
 		</if>
 	</jobability>
 	
 	<weaponskill>
-		<if ad_name="Mandalic Stab"><equip set="Stab_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
-		<if ad_name="Rudra's Storm"><equip set="Storm_WS" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="_______"><equip set="WS_1" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="_______"><equip set="WS_2" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="_______"><equip set="WS_3" /></if><!--Weaponskill action when (1000 TP or higher).-->
 	</weaponskill>
 	
+	<premagic>
+	
+	<equip set="FastCast"/>
+	
+	</premagic>
+	
+	
 	<midmagic>
-        <if ad_skill="Ninjutsu">
-		    <if ad_name="Utsusemi*|Tonko*|Monomi">
-                <equip set="Ninjutsu_Buff"/>
-        </if>
-<!--
-===========================================================================================================================================
-Counter Clock Wise Weakness Rotation Spells.
-
-		 Fire
-     /          \
- Ice             Water
-   |             |
-Wind             Lightning
-     \          /
-	     Earth  
-		 
-===========================================================================================================================================
--->
-            <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
-                <equip set="Ninjutsu_Ele"/>
-		</if>
-			 <elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
-                <equip set="Ninjutsu_Debuff"/>
-		</if>
-         </elseif>		
+      <if ad_skill="Ninjutsu">
+		<if ad_name="Utsusemi*|Tonko*|Monomi">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+            </if>
+        <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+            <equip set="Magical_ATK"/>
+			</elseif>
+	</if>
+			<elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+            <equip set="Magical_ACC"/>		
+         </elseif>
     </midmagic>
 </ashitacast>
