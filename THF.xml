@@ -149,6 +149,7 @@ To do:
 			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
 	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
 		    </equip>
+		</if>	
 		<if ad_name="Conspirator">
 			<equip>
 		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
