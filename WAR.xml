@@ -97,7 +97,7 @@ Info For Class:
 		    <equip set="Melee" />
 		</if>
 	<else>
-		<equip set="Stand" /><!--When not engaged this will equip "Stand Set"-->
+		<equip set="Idle_Set" /><!--When not engaged this will equip "Stand Set"-->
 	    </else>
 		<!--In ur macro use "/th" to use this line below-->
 		<if advanced="$TH=1">
