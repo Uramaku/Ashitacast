@@ -1,5 +1,5 @@
 # Ashitacast
-Cast 2017
+Cast 2018
 Ashitacast is a plugin designed to manage your gear swaps.
 This is done through an XML file, which should be placed in Ashita/Config/Ashitacast/
 and named CharacterName_JOB.xml.  XMLs will be automatically loaded or unloaded whenever you change jobs,
