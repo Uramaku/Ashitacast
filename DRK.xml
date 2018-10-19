@@ -1,0 +1,304 @@
+<!--
+===========================================================================================================================================
+Ura & Takime {DRK} script for Ashitacast by Rizekai & Kenjigoku
+v2.1, 10/19/2018
+
+Server: Realms of Jova
+
+Changes:
+* Initial version.
+ 
+To do:
+* None.
+
+Info For Class: https://www.bg-wiki.com/bg/Dark_Knight
+===========================================================================================================================================
+-->
+
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statuspdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+	
+	<sets>
+	    <set name="Idle_Set"><!--When not engaged. Idle equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="WS_1"><!--Weaponskill equip set-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="WS_2"><!--Weaponskill equip set-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="WS_3"><!--Weaponskill equip set-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="Melee"><!--When you or engaged. Melee equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+		<set name="FastCast"><!--For all your fastcast gear-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>	
+		</set>
+	    <set name="Magical_ATK"><!--Magical Attack equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_ACC"><!--Magical Mnd Accuracy equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Magical_DRK"><!--Magical Dark equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Spikes" baseset="Magical_Buff"><!--Extra Ice, Blaze an Shock Spike gear-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+		<set name="Ninjutsu_Cast"><!--When casting Ninjutsu Utsusemi equip set.-->
+		    <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	        <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+		</set>
+	</sets>
+	
+		<variables>
+		<var name="TH" value="0" />
+		<var name="TH">0</var>
+	</variables>
+	<!-- You will have to make in your macro to turn on or off with this command "/th"-->
+	<inputcommands>
+		<cmd input="/th">
+			<if advanced="$TH=0">
+				<setvar name="TH" value="1" />
+				<addtochat color="122">Treasure Mode Activated!</addtochat>
+			</if>
+			<else>
+				<setvar name="TH" value="0" />
+				<addtochat color="122">Treasure Mode Disable!</addtochat>
+			</else>
+		</cmd>
+	</inputcommands>
+
+	<idlegear>
+    <if P_status="engaged"><!--When engaged this will equip "Melee Set"-->
+		    <equip set="Melee" />
+		</if>
+	<else>
+		<equip set="Idle_Set" /><!--When not engaged this will equip "Stand Set"-->
+	    </else>
+		<!--In ur macro use "/th" to use this line below-->
+		<if advanced="$TH=1">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>		
+		</if>
+	</idlegear>
+	
+	<jobability><!--jobability equip set.-->
+	    <if ad_name="Blood Weapon">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Last Resort">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Weapon Bash">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Souleater">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Consume Mana">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Dark Seal">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Diabolic Eye">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Nether Void">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Arcane Crest">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Scarlet Delirium">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Soul Enslavement">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+		<if ad_name="Arcane Circle">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+		</if>
+	</jobability>
+	
+	<weaponskill>
+		<if ad_name="_______"><equip set="WS_1" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="_______"><equip set="WS_2" /></if><!--Weaponskill action when (1000 TP or higher).-->
+		<if ad_name="_______"><equip set="WS_3" /></if><!--Weaponskill action when (1000 TP or higher).-->
+	</weaponskill>
+	
+	<premagic>	
+	<equip set="FastCast"/>
+	<if ad_type="Whitemagic">  							
+        <if ad_skill="Healingmagic">
+            </if>
+		    <elseif ad_skill="Divinemagic">	
+                </elseif>   
+            <elseif ad_skill="Enhancingmagic">
+                </elseif>		 
+		    <elseif ad_skill="Enfeeblingmagic">
+		        </elseif>
+	</if>
+    <elseif ad_type="Blackmagic">          
+        <if ad_skill="Elementalmagic">
+		    </if>
+	</elseif>
+            <elseif ad_skill="Darkmagic">
+                </elseif>   
+	    <if ad_skill="Ninjutsu">
+			</if>		
+	</premagic>
+	
+	<midmagic>
+	<if ad_type="Whitemagic">  							
+        <if ad_skill="Healingmagic">
+			<equip set="Cure"/>
+            </if>
+	    <elseif ad_skill="Divinemagic">
+            <equip set="Magical_Divine"/>  
+            </elseif>					
+    <elseif ad_skill="Enhancingmagic">
+            <equip set="Magical_Buff"/>
+		<if ad_name="*Spikes">
+			<equip set="Spikes"/>
+			</if>
+    </elseif>		 
+	    <elseif ad_skill="Enfeeblingmagic">
+            <equip set="Magical_ACC"/>
+			</elseif>
+	</if>
+    <elseif ad_type="Blackmagic">          
+        <if ad_skill="Elementalmagic">			
+            <equip set="Magical_ATK"/>
+			</if>
+        <elseif ad_skill="Darkmagic">
+	        <equip set="Magical_DRK"/> 
+            </elseif> 
+         <elseif ad_skill="Enfeeblingmagic">
+		    <equip set="Magical_ACC"/>
+		    </elseif>			
+	</elseif>
+    <if ad_skill="Ninjutsu">
+		<if ad_name="Utsusemi*|Tonko*|Monomi">
+            <equip>
+		  <main>_______</main><sub>_______</sub><Range>_______</Range><ammo>_______</ammo>
+			<head>_______</head><neck>_______</neck><lear>_______</lear><rear>_______</rear>
+			<body>_______</body><hands>_______</hands><lring>_______</lring><rring>_______</rring>
+	      <back>_______</back><waist>_______</waist><legs>_______</legs><feet>_______</feet>
+			</equip>
+            </if>
+        <elseif ad_name="Katon*|Suiton*|Raiton*|Doton*|Huton*|Hyoton*">
+            <equip set="Magical_ATK"/>
+			</elseif>
+	</if>
+			<elseif ad_name="Kurayami*|Hojo*|Dokumori|Jubaku">
+            <equip set="Magical_ACC"/>		
+         </elseif>	
+    </midmagic>
+</ashitacast>
